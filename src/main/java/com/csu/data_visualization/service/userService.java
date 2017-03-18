@@ -16,7 +16,25 @@ import java.util.List;
 public class userService {
     @Autowired
     private UserDAO userDAO;
+
+    /**
+     * 获取所有用户
+     * @return
+     */
     public List<user> getUsers() {
         return userDAO.getUsers();
+    }
+
+    /**
+     * 根据账号获取用户
+     * @param account
+     * @return
+     */
+    public user getUserByAccount(String account) {
+        return userDAO.getUserByAccount(account);
+    }
+
+    public boolean addUser(user user) {
+        return userDAO.save(user);
     }
 }

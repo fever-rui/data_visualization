@@ -93,6 +93,12 @@
       <version>3.12.1.GA</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20160810</version>
+    </dependency>
+
   </dependencies>
   <build>
     <finalName>data_visualization</finalName>
