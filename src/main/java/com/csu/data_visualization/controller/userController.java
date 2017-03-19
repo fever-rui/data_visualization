@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 
 /**
  * Created by ZhangRui on 2017/3/10.
@@ -23,7 +26,6 @@ public class userController {
 
     /**
      * 获取所有用户
-     *
      * @param model
      * @return ModelAndView
      */
@@ -35,20 +37,18 @@ public class userController {
     }
 
     /**
-     * 登录界面
-     *
+     * 跳转登录界面
      * @param model
      * @return
      */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView index(ModelAndView model) {
-        model.setViewName("login");
+        model.setViewName("/login");
         return model;
     }
 
     /**
-     * 注册界面
-     *
+     * 跳转注册界面
      * @param model
      * @return
      */
@@ -59,16 +59,60 @@ public class userController {
     }
 
     /**
+     * 跳转至主页
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/home")
+    public ModelAndView toHome(ModelAndView model) {
+        model.setViewName("home_page");
+        return model;
+    }
+
+    /**
+     * 跳转至柱状图
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/chart_columnar")
+    public ModelAndView toColumnar(ModelAndView model) {
+        model.setViewName("chart_columnar");
+        return model;
+    }
+
+    /**
+     * 跳转至折线图
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/chart_line")
+    public ModelAndView toLine(ModelAndView model) {
+        model.setViewName("chart_line");
+        return model;
+    }
+
+    /**
+     * 跳转至扇形图
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/chart_pie")
+    public ModelAndView toPie(ModelAndView model) {
+        model.setViewName("chart_pie");
+        return model;
+    }
+
+    /**
      * 登录
-     *
      * @param account
      * @param password
      * @return
      */
     @ResponseBody
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String doLogin(String account, String password) {
+    public String doLogin(String account, String password, HttpServletRequest request) {
         JSONObject result = new JSONObject();
+        HttpSession session = request.getSession();
         if (account == null || password == null || ("").equals(account.trim()) || ("").equals(password.trim())) {
             result.put("result", "false");
             return result.toString();
@@ -80,6 +124,8 @@ public class userController {
             result.put("result", "false");
             return result.toString();
         } else if (password.equals(loginUser.getPassword())) {
+            session.setAttribute("userAccount",account);
+            session.setAttribute("userName", loginUser.getName());
             result.put("result", "true");
             return result.toString();
         } else {
@@ -90,7 +136,6 @@ public class userController {
 
     /**
      * 注册
-     *
      * @param account
      * @param name
      * @param password
@@ -119,5 +164,20 @@ public class userController {
             result.put("result", "exist");
             return result.toString();
         }
+    }
+
+    /**
+     * 退出
+     * @param request
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/exit")
+    public ModelAndView exit(HttpServletRequest request, ModelAndView model) {
+        HttpSession session=request.getSession();
+        session.setAttribute("userName", null);
+        session.setAttribute("userAccount", null);
+        model.setViewName("login");
+        return model;
     }
 }

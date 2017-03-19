@@ -1,289 +1,365 @@
-
-!function($) {
-    "use strict";
-
-    var Sidemenu = function() {
-        this.$body = $("body"),
-        this.$openLeftBtn = $(".open-left"),
-        this.$menuItem = $("#sidebar-menu a")
-    };
-    Sidemenu.prototype.openLeftBar = function() {
-      $("#wrapper").toggleClass("enlarged");
-      $("#wrapper").addClass("forced");
-
-      if($("#wrapper").hasClass("enlarged") && $("body").hasClass("fixed-left")) {
-        $("body").removeClass("fixed-left").addClass("fixed-left-void");
-      } else if(!$("#wrapper").hasClass("enlarged") && $("body").hasClass("fixed-left-void")) {
-        $("body").removeClass("fixed-left-void").addClass("fixed-left");
-      }
-
-      if($("#wrapper").hasClass("enlarged")) {
-        $(".left ul").removeAttr("style");
-      } else {
-        $(".subdrop").siblings("ul:first").show();
-      }
-
-      toggle_slimscroll(".slimscrollleft");
-      $("body").trigger("resize");
-    },
-    //menu item click
-    Sidemenu.prototype.menuItemClick = function(e) {
-       if(!$("#wrapper").hasClass("enlarged")){
-        if($(this).parent().hasClass("has_sub")) {
-
+$(function() {
+    // 读取body data-type 判断是哪个页面然后执行相应页面方法，方法在下面。
+    var dataType = $('body').attr('data-type');
+    console.log(dataType);
+    for (key in pageData) {
+        if (key == dataType) {
+            pageData[key]();
         }
-        if(!$(this).hasClass("subdrop")) {
-          // hide any open menus and remove all other classes
-          $("ul",$(this).parents("ul:first")).slideUp(350);
-          $("a",$(this).parents("ul:first")).removeClass("subdrop");
-          $("#sidebar-menu .pull-right i").removeClass("md-remove").addClass("md-add");
+    }
+    //     // 判断用户是否已有自己选择的模板风格
+    //    if(storageLoad('SelcetColor')){
+    //      $('body').attr('class',storageLoad('SelcetColor').Color)
+    //    }else{
+    //        storageSave(saveSelectColor);
+    //        $('body').attr('class','theme-black')
+    //    }
 
-          // open our new menu and add the open class
-          $(this).next("ul").slideDown(350);
-          $(this).addClass("subdrop");
-          $(".pull-right i",$(this).parents(".has_sub:last")).removeClass("md-add").addClass("md-remove");
-          $(".pull-right i",$(this).siblings("ul")).removeClass("md-remove").addClass("md-add");
-        }else if($(this).hasClass("subdrop")) {
-          $(this).removeClass("subdrop");
-          $(this).next("ul").slideUp(350);
-          $(".pull-right i",$(this).parent()).removeClass("md-remove").addClass("md-add");
+    autoLeftNav();
+    $(window).resize(function() {
+        autoLeftNav();
+        console.log($(window).width())
+    });
+
+    //    if(storageLoad('SelcetColor')){
+
+    //     }else{
+    //       storageSave(saveSelectColor);
+    //     }
+})
+
+
+// 页面数据
+var pageData = {
+    // ===============================================
+    // 首页
+    // ===============================================
+    'index': function indexData() {
+        $('#example-r').DataTable({
+
+            bInfo: false, //页脚信息
+            dom: 'ti'
+        });
+
+
+        // ==========================
+        // 百度图表A http://echarts.baidu.com/
+        // ==========================
+
+        var echartsA = echarts.init(document.getElementById('tpl-echarts'));
+        option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            grid: {
+                top: '3%',
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [{
+                type: 'category',
+                boundaryGap: false,
+                data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+            }],
+            yAxis: [{
+                type: 'value'
+            }],
+            textStyle: {
+                color: '#838FA1'
+            },
+            series: [{
+                name: '邮件营销',
+                type: 'line',
+                stack: '总量',
+                areaStyle: { normal: {} },
+                data: [120, 132, 101, 134, 90],
+                itemStyle: {
+                    normal: {
+                        color: '#1cabdb',
+                        borderColor: '#1cabdb',
+                        borderWidth: '2',
+                        borderType: 'solid',
+                        opacity: '1'
+                    },
+                    emphasis: {
+
+                    }
+                }
+            }]
+        };
+
+        echartsA.setOption(option);
+    },
+    // ===============================================
+    // 图表页
+    // ===============================================
+    'chart': function chartData() {
+        // ==========================
+        // 百度图表A http://echarts.baidu.com/
+        // ==========================
+
+        var echartsC = echarts.init(document.getElementById('tpl-echarts-C'));
+
+
+        optionC = {
+            tooltip: {
+                trigger: 'axis'
+            },
+
+            legend: {
+                data: ['蒸发量', '降水量', '平均温度']
+            },
+            xAxis: [{
+                type: 'category',
+                data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+            }],
+            yAxis: [{
+                    type: 'value',
+                    name: '水量',
+                    min: 0,
+                    max: 250,
+                    interval: 50,
+                    axisLabel: {
+                        formatter: '{value} ml'
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '温度',
+                    min: 0,
+                    max: 25,
+                    interval: 5,
+                    axisLabel: {
+                        formatter: '{value} °C'
+                    }
+                }
+            ],
+            series: [{
+                    name: '蒸发量',
+                    type: 'bar',
+                    data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+                },
+                {
+                    name: '降水量',
+                    type: 'bar',
+                    data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+                },
+                {
+                    name: '平均温度',
+                    type: 'line',
+                    yAxisIndex: 1,
+                    data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+                }
+            ]
+        };
+
+        echartsC.setOption(optionC);
+
+        var echartsB = echarts.init(document.getElementById('tpl-echarts-B'));
+        optionB = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                x: 'center',
+                data: ['某软件', '某主食手机', '某水果手机', '降水量', '蒸发量']
+            },
+            radar: [{
+                    indicator: [
+                        { text: '品牌', max: 100 },
+                        { text: '内容', max: 100 },
+                        { text: '可用性', max: 100 },
+                        { text: '功能', max: 100 }
+                    ],
+                    center: ['25%', '40%'],
+                    radius: 80
+                },
+                {
+                    indicator: [
+                        { text: '外观', max: 100 },
+                        { text: '拍照', max: 100 },
+                        { text: '系统', max: 100 },
+                        { text: '性能', max: 100 },
+                        { text: '屏幕', max: 100 }
+                    ],
+                    radius: 80,
+                    center: ['50%', '60%'],
+                },
+                {
+                    indicator: (function() {
+                        var res = [];
+                        for (var i = 1; i <= 12; i++) {
+                            res.push({ text: i + '月', max: 100 });
+                        }
+                        return res;
+                    })(),
+                    center: ['75%', '40%'],
+                    radius: 80
+                }
+            ],
+            series: [{
+                    type: 'radar',
+                    tooltip: {
+                        trigger: 'item'
+                    },
+                    itemStyle: { normal: { areaStyle: { type: 'default' } } },
+                    data: [{
+                        value: [60, 73, 85, 40],
+                        name: '某软件'
+                    }]
+                },
+                {
+                    type: 'radar',
+                    radarIndex: 1,
+                    data: [{
+                            value: [85, 90, 90, 95, 95],
+                            name: '某主食手机'
+                        },
+                        {
+                            value: [95, 80, 95, 90, 93],
+                            name: '某水果手机'
+                        }
+                    ]
+                },
+                {
+                    type: 'radar',
+                    radarIndex: 2,
+                    itemStyle: { normal: { areaStyle: { type: 'default' } } },
+                    data: [{
+                            name: '降水量',
+                            value: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 75.6, 82.2, 48.7, 18.8, 6.0, 2.3],
+                        },
+                        {
+                            name: '蒸发量',
+                            value: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 35.6, 62.2, 32.6, 20.0, 6.4, 3.3]
+                        }
+                    ]
+                }
+            ]
+        };
+        echartsB.setOption(optionB);
+        var echartsA = echarts.init(document.getElementById('tpl-echarts-A'));
+        option = {
+
+            tooltip: {
+                trigger: 'axis',
+            },
+            legend: {
+                data: ['邮件', '媒体', '资源']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [{
+                type: 'category',
+                boundaryGap: true,
+                data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+            }],
+
+            yAxis: [{
+                type: 'value'
+            }],
+            series: [{
+                    name: '邮件',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: { normal: {} },
+                    data: [120, 132, 101, 134, 90, 230, 210],
+                    itemStyle: {
+                        normal: {
+                            color: '#59aea2'
+                        },
+                        emphasis: {
+
+                        }
+                    }
+                },
+                {
+                    name: '媒体',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: { normal: {} },
+                    data: [220, 182, 191, 234, 290, 330, 310],
+                    itemStyle: {
+                        normal: {
+                            color: '#e7505a'
+                        }
+                    }
+                },
+                {
+                    name: '资源',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: { normal: {} },
+                    data: [150, 232, 201, 154, 190, 330, 410],
+                    itemStyle: {
+                        normal: {
+                            color: '#32c5d2'
+                        }
+                    }
+                }
+            ]
+        };
+        echartsA.setOption(option);
+    }
+}
+
+
+// 风格切换
+
+$('.tpl-skiner-toggle').on('click', function() {
+    $('.tpl-skiner').toggleClass('active');
+})
+
+$('.tpl-skiner-content-bar').find('span').on('click', function() {
+    $('body').attr('class', $(this).attr('data-color'))
+    saveSelectColor.Color = $(this).attr('data-color');
+    // 保存选择项
+    storageSave(saveSelectColor);
+
+})
+
+
+
+
+// 侧边菜单开关
+
+
+function autoLeftNav() {
+
+
+
+    $('.tpl-header-switch-button').on('click', function() {
+        if ($('.left-sidebar').is('.active')) {
+            if ($(window).width() > 1024) {
+                $('.tpl-content-wrapper').removeClass('active');
+            }
+            $('.left-sidebar').removeClass('active');
+        } else {
+
+            $('.left-sidebar').addClass('active');
+            if ($(window).width() > 1024) {
+                $('.tpl-content-wrapper').addClass('active');
+            }
         }
-      }
-    },
+    })
 
-    //init sidemenu
-    Sidemenu.prototype.init = function() {
-      var $this  = this;
-
-      var ua = navigator.userAgent,
-        event = (ua.match(/iP/i)) ? "touchstart" : "click";
-
-      //bind on click
-      this.$openLeftBtn.on(event, function(e) {
-        e.stopPropagation();
-        $this.openLeftBar();
-      });
-
-      // LEFT SIDE MAIN NAVIGATION
-      $this.$menuItem.on(event, $this.menuItemClick);
-
-      // NAVIGATION HIGHLIGHT & OPEN PARENT
-      $("#sidebar-menu ul li.has_sub a.active").parents("li:last").children("a:first").addClass("active").trigger("click");
-    },
-
-    //init Sidemenu
-    $.Sidemenu = new Sidemenu, $.Sidemenu.Constructor = Sidemenu
-
-}(window.jQuery),
-
-
-function($) {
-    "use strict";
-
-    var FullScreen = function() {
-        this.$body = $("body"),
-        this.$fullscreenBtn = $("#btn-fullscreen")
-    };
-
-    //turn on full screen
-    // Thanks to http://davidwalsh.name/fullscreen
-    FullScreen.prototype.launchFullscreen  = function(element) {
-      if(element.requestFullscreen) {
-        element.requestFullscreen();
-      } else if(element.mozRequestFullScreen) {
-        element.mozRequestFullScreen();
-      } else if(element.webkitRequestFullscreen) {
-        element.webkitRequestFullscreen();
-      } else if(element.msRequestFullscreen) {
-        element.msRequestFullscreen();
-      }
-    },
-    FullScreen.prototype.exitFullscreen = function() {
-      if(document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if(document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else if(document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      }
-    },
-    //toggle screen
-    FullScreen.prototype.toggle_fullscreen  = function() {
-      var $this = this;
-      var fullscreenEnabled = document.fullscreenEnabled || document.mozFullScreenEnabled || document.webkitFullscreenEnabled;
-      if(fullscreenEnabled) {
-        if(!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
-          $this.launchFullscreen(document.documentElement);
-        } else{
-          $this.exitFullscreen();
-        }
-      }
-    },
-    //init sidemenu
-    FullScreen.prototype.init = function() {
-      var $this  = this;
-      //bind
-      $this.$fullscreenBtn.on('click', function() {
-        $this.toggle_fullscreen();
-      });
-    },
-     //init FullScreen
-    $.FullScreen = new FullScreen, $.FullScreen.Constructor = FullScreen
-
-}(window.jQuery),
-
-
-
-//main app module
- function($) {
-    "use strict";
-
-    var App = function() {
-        this.VERSION = "1.3.0",
-        this.AUTHOR = "Coderthemes",
-        this.SUPPORT = "coderthemes@gmail.com",
-        this.pageScrollElement = "html, body",
-        this.$body = $("body")
-    };
-
-     //on doc load
-    App.prototype.onDocReady = function(e) {
-      FastClick.attach(document.body);
-      resizefunc.push("initscrolls");
-      resizefunc.push("changeptype");
-
-      $('.animate-number').each(function(){
-        $(this).animateNumbers($(this).attr("data-value"), true, parseInt($(this).attr("data-duration")));
-      });
-
-      //RUN RESIZE ITEMS
-      $(window).resize(debounce(resizeitems,100));
-      $("body").trigger("resize");
-
-      // right side-bar toggle
-      $('.right-bar-toggle').on('click', function(e){
-
-          $('#wrapper').toggleClass('right-bar-enabled');
-      });
-
-
-    },
-    //initilizing
-    App.prototype.init = function() {
-        var $this = this;
-        //document load initialization
-        $(document).ready($this.onDocReady);
-        //init side bar - left
-        $.Sidemenu.init();
-        //init fullscreen
-        $.FullScreen.init();
-    },
-
-    $.App = new App, $.App.Constructor = App
-
-}(window.jQuery),
-
-//initializing main application module
-function($) {
-    "use strict";
-    $.App.init();
-}(window.jQuery);
-
-
-
-/* ------------ some utility functions ----------------------- */
-//this full screen
-var toggle_fullscreen = function () {
-
-}
-
-function executeFunctionByName(functionName, context /*, args */) {
-  var args = [].slice.call(arguments).splice(2);
-  var namespaces = functionName.split(".");
-  var func = namespaces.pop();
-  for(var i = 0; i < namespaces.length; i++) {
-    context = context[namespaces[i]];
-  }
-  return context[func].apply(this, args);
-}
-var w,h,dw,dh;
-var changeptype = function(){
-    w = $(window).width();
-    h = $(window).height();
-    dw = $(document).width();
-    dh = $(document).height();
-
-    if(jQuery.browser.mobile === true){
-        $("body").addClass("mobile").removeClass("fixed-left");
-    }
-
-    if(!$("#wrapper").hasClass("forced")){
-      if(w > 990){
-        $("body").removeClass("smallscreen").addClass("widescreen");
-          $("#wrapper").removeClass("enlarged");
-      }else{
-        $("body").removeClass("widescreen").addClass("smallscreen");
-        $("#wrapper").addClass("enlarged");
-        $(".left ul").removeAttr("style");
-      }
-      if($("#wrapper").hasClass("enlarged") && $("body").hasClass("fixed-left")){
-        $("body").removeClass("fixed-left").addClass("fixed-left-void");
-      }else if(!$("#wrapper").hasClass("enlarged") && $("body").hasClass("fixed-left-void")){
-        $("body").removeClass("fixed-left-void").addClass("fixed-left");
-      }
-
-  }
-  toggle_slimscroll(".slimscrollleft");
-}
-
-
-var debounce = function(func, wait, immediate) {
-  var timeout, result;
-  return function() {
-    var context = this, args = arguments;
-    var later = function() {
-      timeout = null;
-      if (!immediate) result = func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) result = func.apply(context, args);
-    return result;
-  };
-}
-
-function resizeitems(){
-  if($.isArray(resizefunc)){
-    for (i = 0; i < resizefunc.length; i++) {
-        window[resizefunc[i]]();
-    }
-  }
-}
-
-function initscrolls(){
-    if(jQuery.browser.mobile !== true){
-      //SLIM SCROLL
-      $('.slimscroller').slimscroll({
-        height: 'auto',
-        size: "5px"
-      });
-
-      $('.slimscrollleft').slimScroll({
-          height: 'auto',
-          position: 'right',
-          size: "5px",
-          color: '#dcdcdc',
-          wheelStep: 5
-      });
-  }
-}
-function toggle_slimscroll(item){
-    if($("#wrapper").hasClass("enlarged")){
-      $(item).css("overflow","inherit").parent().css("overflow","inherit");
-      $(item). siblings(".slimScrollBar").css("visibility","hidden");
-    }else{
-      $(item).css("overflow","hidden").parent().css("overflow","hidden");
-      $(item). siblings(".slimScrollBar").css("visibility","visible");
+    if ($(window).width() < 1024) {
+        $('.left-sidebar').addClass('active');
+    } else {
+        $('.left-sidebar').removeClass('active');
     }
 }
+
+
+// 侧边菜单
+$('.sidebar-nav-sub-title').on('click', function() {
+    $(this).siblings('.sidebar-nav-sub').slideToggle(80)
+        .end()
+        .find('.sidebar-nav-sub-ico').toggleClass('sidebar-nav-sub-ico-rotate');
+})
