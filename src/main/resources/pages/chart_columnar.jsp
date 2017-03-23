@@ -25,7 +25,7 @@
 </head>
 
 <body data-type="widgets">
-<script src="<%=request.getContextPath()%>assets/js/theme.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/theme.js"></script>
 <div class="am-g tpl-g">
 
     <div>
@@ -36,7 +36,7 @@
     <div class="left-sidebar">
         <ul class="sidebar-nav">
             <li class="sidebar-nav-link">
-                <a href="index.html">
+                <a href="<%=request.getContextPath()%>/index.html">
                     <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
                 </a>
             </li>
@@ -46,18 +46,18 @@
                 </a>
                 <ul class="sidebar-nav sidebar-nav-sub" style="display: block;">
                     <li class="sidebar-nav-link">
-                        <a href="chart_line" class="sub-active">
+                        <a href="<%=request.getContextPath()%>/chart_line" class="sub-active">
                             <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 折线图
                         </a>
                     </li>
 
                     <li class="sidebar-nav-link">
-                        <a href="chart_columnar.">
+                        <a href="<%=request.getContextPath()%>/chart_columnar">
                             <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 柱状图
                         </a>
                     </li>
                     <li class="sidebar-nav-link">
-                        <a href="chart_pie">
+                        <a href="<%=request.getContextPath()%>/chart_pie">
                             <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 饼状图
                         </a>
                     </li>
@@ -69,6 +69,29 @@
 
     <!-- 内容区域 -->
     <div class="tpl-content-wrapper">
+
+        <div class="container-fluid am-cf">
+            <div class="row">
+                <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
+                    <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span>柱状图</div>
+                    <p class="page-header-description">图表组件使用的是 <a href="http://echarts.baidu.com">百度图表echarts</a></p>
+                </div>
+                <form  class="am-u-sm-12 am-u-md-3" id="fileForm" action="<%=request.getContextPath()%>/record/columnar_fileLoad" method="post" enctype="multipart/form-data">
+                    <div class="am-form-group am-form-file">
+                        <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                            <i class="am-icon-cloud-upload"></i> 添加文件</button>
+                        <input id="doc-form-file" type="file" name="file">
+                    </div>
+                    <div id="file-list"></div>
+                    <button class="am-btn am-btn-default am-btn-sm" type="submit">提交</button>
+                    <!-- 显示excel上传结果返回显示 -->
+                    <div id="excel-return">
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
 
         <div class="row-content am-cf">
             <div class="widget am-cf">
@@ -132,6 +155,28 @@
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/app.js" ></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/charts/echarts.js" ></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/charts/columnarChart.js" ></script>
+<script>
+    // 显示文件名
+    $(function() {
+        $('#doc-form-file').on('change', function() {
+            var fileNames = '';
+            $.each(this.files, function() {
+                fileNames += '<span class="am-badge">' + this.name + '</span> ';
+            });
+            $('#file-list').html(fileNames);
+        });
+    });
+
+    var $formSubmit = $("#fileForm button[type=submit]"); //导入文件的submit
+
+    //未导入文件时return
+    $formSubmit.on("click",function(check){
+        if($("#doc-form-file").val() == "") {
+            check.preventDefault();//此处阻止提交表单
+            alert("请先选择文件");
+        }
+    });
+</script>
 </body>
 
 </html>

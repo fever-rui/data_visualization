@@ -43,7 +43,7 @@
     </div>
     <div class="tpl-login">
         <div class="tpl-login-content">
-            <form class="am-form tpl-form-line-form" action="/login">
+            <form class="am-form tpl-form-line-form" action="login">
                 <fieldset>
                     <div class="am-g">
                         <div class="am-form-group">

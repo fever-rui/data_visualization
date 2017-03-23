@@ -10,7 +10,7 @@
 <header>
     <!-- logo -->
     <div class="am-fl tpl-header-logo">
-        <a href="home">数据可视化平台</a>
+        <a href="<%=request.getContextPath()%>/home">数据可视化平台</a>
     </div>
     <!-- 右侧内容 -->
     <div class="tpl-header-fluid">

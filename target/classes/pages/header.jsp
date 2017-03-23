@@ -10,7 +10,7 @@
 <header>
     <!-- logo -->
     <div class="am-fl tpl-header-logo">
-        <a href="home">数据可视化平台</a>
+        <a href="<%=request.getContextPath()%>/home">数据可视化平台</a>
     </div>
     <!-- 右侧内容 -->
     <div class="tpl-header-fluid">
@@ -25,7 +25,7 @@
                     <a href="javascript:;">欢迎你, <span><%=session.getAttribute("userName")%></span> </a>
                 </li>
                 <li class="am-text-sm">
-                    <a href="exit">
+                    <a href="javascript:;">
                         <span class="am-icon-sign-out"></span> 退出
                     </a>
                 </li>

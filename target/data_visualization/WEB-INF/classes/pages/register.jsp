@@ -47,7 +47,7 @@
             <span class="tpl-login-content-info">
                   创建一个新的用户
             </span>
-            <form class="am-form tpl-form-line-form" action="/register">
+            <form class="am-form tpl-form-line-form" action="register">
                 <fieldset>
                     <div class="am-g">
                         <div class="am-form-group">
@@ -66,7 +66,7 @@
                         </div>
 
                         <div class="am-form-group ">
-                            <button type="button" class="am-btn am-btn-primary am-radius" id="registerButton"
+                            <button type="button" class="am-btn am-btn-primary am-/adius" id="registerButton"
                                     style="width: 100%;height: 100%;">Register
                             </button>
                         </div>
