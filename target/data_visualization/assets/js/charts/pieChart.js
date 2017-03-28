@@ -1,6 +1,6 @@
 /*----------------------饼状图-----------------------*/
+
 //环形图
-(function(){
 	
 var pie1 = echarts.init(document.getElementById("pie1"));
 
@@ -56,12 +56,10 @@ option = {
 };
 
 pie1.setOption(option);
-})();
 
 
 //嵌套环形图
-(function(){
-	
+
 var pie2 = echarts.init(document.getElementById("pie2"));
 
 option = {
@@ -122,12 +120,10 @@ option = {
     ]
 };
 pie2.setOption(option);
-})();
+
 
 
 //饼状图
-(function(){
-	
 var pie3 = echarts.init(document.getElementById("pie3"));
 
 option = {
@@ -169,12 +165,10 @@ option = {
 };
 
 pie3.setOption(option);
-})();
 
 
 //南丁格尔玫瑰图
-(function(){
-	
+
 var pie4 = echarts.init(document.getElementById("pie4"));
 
 option = {
@@ -260,4 +254,109 @@ option = {
 };
 
 pie4.setOption(option);
-})();
+
+
+// 显示文件名
+$('#doc-form-file').on('change', function() {
+    $.each(this.files, function() {
+        var filelist = $('#file-list')
+        filelist.append('<span class="am-badge">' + this.name + '</span> ')
+    });
+});
+
+//消除文件名
+function removeFile() {
+    $('#doc-form-file').val("");
+    var span=$('#file-list>span');
+    span.remove();
+};
+
+
+$('#fileSubmit').click(function () {
+    if($("#doc-form-file").val() == "") {
+        alert("请先选择文件");
+    }else {
+        var form = new FormData(document.getElementById("fileForm"));
+        $.ajax({
+            url:"/record/pie_fileLoad",
+            type:"post",
+            data:form,
+            processData:false,
+            contentType:false,
+            success:function(data){
+                removeFile();
+                alert("success");
+                modifyChart(data);
+            },
+            error:function(e){
+                alert("错误！！");
+            }
+        });
+    }
+
+});
+
+
+function modifyChart(chartData) {
+    // var pie1 = echarts.init(document.getElementById("pie1"));
+
+    var jsonData=JSON.parse(chartData);
+    var chartTitle=jsonData.title;
+    var len=jsonData.data.length;
+
+    var names=[];    //类别数组（实际用来盛放X轴坐标值）
+
+    for(var i=0;i<len;i++){
+        names.push(jsonData.data[i].name);    //挨个取出类别并填入类别数组
+    }
+
+
+
+    option = {
+
+        title : {
+            text: chartTitle,
+            x: 'center'
+        },
+
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data:names,
+        },
+        series: [
+            {
+                name:chartTitle,
+                type:'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: jsonData.data
+            }
+        ]
+    };
+
+    pie1.setOption(option);
+
+}

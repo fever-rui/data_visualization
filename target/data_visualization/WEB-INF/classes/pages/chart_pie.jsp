@@ -5,14 +5,14 @@
   Time: 23:42
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>折线图</title>
+    <title>扇形图</title>
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
@@ -76,19 +76,36 @@
                     <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span>饼状图</div>
                     <p class="page-header-description">图表组件使用的是 <a href="http://echarts.baidu.com">百度图表echarts</a></p>
                 </div>
-                <form  class="am-u-sm-12 am-u-md-3" id="fileForm" action="<%=request.getContextPath()%>/record/columnar_fileLoad" method="post" enctype="multipart/form-data">
+
+                <%--<form  class="am-u-sm-12 am-u-md-3" id="fileForm" action="<%=request.getContextPath()%>/record/pie_fileLoad" method="post" enctype="multipart/form-data">--%>
+                    <%--<div class="am-form-group am-form-file">--%>
+                        <%--<button type="button" class="am-btn am-btn-danger am-btn-sm">--%>
+                            <%--<i class="am-icon-cloud-upload"></i> 添加文件</button>--%>
+                        <%--<input id="doc-form-file" type="file" name="file">--%>
+                    <%--</div>--%>
+                    <%--<div id="file-list"></div>--%>
+                    <%--<button class="am-btn am-btn-default am-btn-sm" type="submit">提交</button>--%>
+                    <%--<!-- 显示excel上传结果返回显示 -->--%>
+                    <%--<div id="excel-return">--%>
+
+                    <%--</div>--%>
+                <%--</form>--%>
+
+                <form  class="am-u-sm-12 am-u-md-3" id="fileForm" id="fileForm"  method="post" enctype="multipart/form-data">
                     <div class="am-form-group am-form-file">
                         <button type="button" class="am-btn am-btn-danger am-btn-sm">
                             <i class="am-icon-cloud-upload"></i> 添加文件</button>
                         <input id="doc-form-file" type="file" name="file">
                     </div>
-                    <div id="file-list"></div>
-                    <button class="am-btn am-btn-default am-btn-sm" type="submit">提交</button>
+                    <div id="file-list">
+                    </div>
+                    <button class="am-btn am-btn-default am-btn-sm" id="fileSubmit" type="button">提交</button>
                     <!-- 显示excel上传结果返回显示 -->
                     <div id="excel-return">
 
                     </div>
                 </form>
+
             </div>
 
         </div>
@@ -155,29 +172,6 @@
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/app.js" ></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/charts/echarts.js" ></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/charts/pieChart.js" ></script>
-<script>
-    // 显示文件名
-    $(function() {
-        $('#doc-form-file').on('change', function() {
-            var fileNames = '';
-            $.each(this.files, function() {
-                fileNames += '<span class="am-badge">' + this.name + '</span> ';
-            });
-            $('#file-list').html(fileNames);
-        });
-    });
-
-    var $formSubmit = $("#fileForm button[type=submit]"); //导入文件的submit
-
-    //未导入文件时return
-    $formSubmit.on("click",function(check){
-        if($("#doc-form-file").val() == "") {
-            check.preventDefault();//此处阻止提交表单
-            alert("请先选择文件");
-        }
-    });
-</script>
-
 </body>
 
 </html>

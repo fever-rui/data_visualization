@@ -12,16 +12,16 @@ public class user {
     @Column(name="id", nullable=false,length=20)
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer id;
+    private Integer id;//id，主键
 
     @Column(name="account",nullable=false,length=20)
-    private String account;
+    private String account;//账户
 
     @Column(name="name",length=20)
-    private String name;
+    private String name;//用户名称
 
     @Column(name="password",length=20)
-    private String password;
+    private String password;//密码
 
     public Integer getId() {
         return id;

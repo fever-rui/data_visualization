@@ -76,7 +76,7 @@
                     <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span>折线图</div>
                     <p class="page-header-description">图表组件使用的是 <a href="http://echarts.baidu.com">百度图表echarts</a></p>
                 </div>
-                <form  class="am-u-sm-12 am-u-md-3" id="fileForm" action="<%=request.getContextPath()%>/record/columnar_fileLoad" method="post" enctype="multipart/form-data">
+                <form  class="am-u-sm-12 am-u-md-3" id="fileForm" action="<%=request.getContextPath()%>/record/line_fileLoad" method="post" enctype="multipart/form-data">
                     <div class="am-form-group am-form-file">
                         <button type="button" class="am-btn am-btn-danger am-btn-sm">
                             <i class="am-icon-cloud-upload"></i> 添加文件</button>

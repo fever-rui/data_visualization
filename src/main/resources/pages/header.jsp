@@ -25,7 +25,7 @@
                     <a href="javascript:;">欢迎你, <span><%=session.getAttribute("userName")%></span> </a>
                 </li>
                 <li class="am-text-sm">
-                    <a href="javascript:;">
+                    <a href="<%=request.getContextPath()%>/exit">
                         <span class="am-icon-sign-out"></span> 退出
                     </a>
                 </li>

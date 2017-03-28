@@ -143,8 +143,9 @@ public class userController {
      */
     @ResponseBody
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String doRegister(String account, String name, String password) {
+    public String doRegister(String account, String name, String password, HttpServletRequest request) {
         JSONObject result = new JSONObject();
+        HttpSession session = request.getSession();
         if (account == null || name == null || password == null || ("").equals(account.trim()) || ("").equals(name.trim()) || ("").equals(password.trim())) {
             result.put("result", "false");
             return result.toString();
@@ -158,6 +159,8 @@ public class userController {
             registerUser.setName(name);
             registerUser.setPassword(password);
             userService.addUser(registerUser);
+            session.setAttribute("userAccount",account);
+            session.setAttribute("userName", registerUser.getName());
             result.put("result", "true");
             return result.toString();
         } else {

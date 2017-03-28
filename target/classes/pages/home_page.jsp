@@ -17,7 +17,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    <script src="<%=request.getContextPath()%>/assets/js/echarts.min.js"></script>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/amazeui.min.css"/>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/amazeui.datatables.min.css"/>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/app.css">
