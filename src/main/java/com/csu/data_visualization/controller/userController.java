@@ -2,6 +2,8 @@ package com.csu.data_visualization.controller;
 
 import com.csu.data_visualization.model.user;
 import com.csu.data_visualization.service.userService;
+import com.csu.data_visualization.util.getHost;
+import org.apache.log4j.Logger;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +23,8 @@ import javax.servlet.http.HttpSession;
 @RequestMapping(value = "/")
 public class userController {
 
+    private static final Logger logger = Logger.getLogger(userController.class);
+
     @Autowired
     private userService userService;
 
@@ -30,7 +34,9 @@ public class userController {
      * @return ModelAndView
      */
     @RequestMapping(value = "/index", method = RequestMethod.GET)
-    public ModelAndView getAllUsers(ModelAndView model) {
+    public ModelAndView getAllUsers(ModelAndView model,HttpServletRequest request) {
+        logger.info("ip:"+ getHost.getRemoteHost(request)+"用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入getAllUsers函数 ");
         model.addObject("users", userService.getUsers());
         model.setViewName("index");
         return model;
@@ -42,7 +48,8 @@ public class userController {
      * @return
      */
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView index(ModelAndView model) {
+    public ModelAndView toLogin(ModelAndView model,HttpServletRequest request) {
+        logger.info("ip:"+ getHost.getRemoteHost(request) +" toLogin函数转入登录界面 ");
         model.setViewName("/login");
         return model;
     }
@@ -53,7 +60,8 @@ public class userController {
      * @return
      */
     @RequestMapping(value = "/registerView", method = RequestMethod.GET)
-    public ModelAndView toRegister(ModelAndView model) {
+    public ModelAndView toRegister(ModelAndView model,HttpServletRequest request) {
+        logger.info("ip:"+ getHost.getRemoteHost(request) +" toRegister函数,转入注册界面 ");
         model.setViewName("register");
         return model;
     }
@@ -64,7 +72,9 @@ public class userController {
      * @return
      */
     @RequestMapping(value = "/home")
-    public ModelAndView toHome(ModelAndView model) {
+    public ModelAndView toHome(ModelAndView model,HttpServletRequest request) {
+        logger.info("ip:"+ getHost.getRemoteHost(request)+"用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入toHome函数 ");
         model.setViewName("home_page");
         return model;
     }
@@ -75,7 +85,9 @@ public class userController {
      * @return
      */
     @RequestMapping(value = "/chart_columnar")
-    public ModelAndView toColumnar(ModelAndView model) {
+    public ModelAndView toColumnar(ModelAndView model,HttpServletRequest request) {
+        logger.info("ip:"+ getHost.getRemoteHost(request)+"用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入toColumnar函数 ");
         model.setViewName("chart_columnar");
         return model;
     }
@@ -86,7 +98,9 @@ public class userController {
      * @return
      */
     @RequestMapping(value = "/chart_line")
-    public ModelAndView toLine(ModelAndView model) {
+    public ModelAndView toLine(ModelAndView model,HttpServletRequest request) {
+        logger.info("ip:"+ getHost.getRemoteHost(request)+"用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入toLine函数 ");
         model.setViewName("chart_line");
         return model;
     }
@@ -97,7 +111,9 @@ public class userController {
      * @return
      */
     @RequestMapping(value = "/chart_pie")
-    public ModelAndView toPie(ModelAndView model) {
+    public ModelAndView toPie(ModelAndView model,HttpServletRequest request) {
+        logger.info("ip:"+ getHost.getRemoteHost(request)+"用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入toPie函数 ");
         model.setViewName("chart_pie");
         return model;
     }
@@ -111,6 +127,9 @@ public class userController {
     @ResponseBody
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String doLogin(String account, String password, HttpServletRequest request) {
+        logger.info("ip:"+ getHost.getRemoteHost(request)+" 进入doLogin函数"+" 参数："+" account-"+account
+                +" password-"+password);
+
         JSONObject result = new JSONObject();
         HttpSession session = request.getSession();
         if (account == null || password == null || ("").equals(account.trim()) || ("").equals(password.trim())) {
@@ -126,6 +145,7 @@ public class userController {
         } else if (password.equals(loginUser.getPassword())) {
             session.setAttribute("userAccount",account);
             session.setAttribute("userName", loginUser.getName());
+            session.setAttribute("uid",loginUser.getId());
             result.put("result", "true");
             return result.toString();
         } else {
@@ -144,6 +164,10 @@ public class userController {
     @ResponseBody
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String doRegister(String account, String name, String password, HttpServletRequest request) {
+
+        logger.info("ip:"+ getHost.getRemoteHost(request)+" 进入doRegister函数"+" 参数："+" account-"+account
+                +" name-"+name+" password-"+password);
+
         JSONObject result = new JSONObject();
         HttpSession session = request.getSession();
         if (account == null || name == null || password == null || ("").equals(account.trim()) || ("").equals(name.trim()) || ("").equals(password.trim())) {
@@ -177,6 +201,10 @@ public class userController {
      */
     @RequestMapping(value = "/exit")
     public ModelAndView exit(HttpServletRequest request, ModelAndView model) {
+
+        logger.info("ip:"+ getHost.getRemoteHost(request)+"用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入exit函数 ");
+
         HttpSession session=request.getSession();
         session.setAttribute("userName", null);
         session.setAttribute("userAccount", null);

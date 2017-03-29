@@ -17,15 +17,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/amazeui.min.css"/>
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/amazeui.datatables.min.css"/>
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/app.css">
-    <script src="<%=request.getContextPath()%>/assets/js/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/amazeui.datatables.min.css"/>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/app.css">
+    <script src="<%=request.getContextPath()%>/js/jquery-3.1.1.js"></script>
 
 </head>
 
 <body data-type="widgets">
-<script src="<%=request.getContextPath()%>/assets/js/theme.js"></script>
+<script src="<%=request.getContextPath()%>/js/theme.js"></script>
 <div class="am-g tpl-g">
 
     <div>
@@ -36,7 +36,7 @@
     <div class="left-sidebar">
         <ul class="sidebar-nav">
             <li class="sidebar-nav-link">
-                <a href="<%=request.getContextPath()%>/index.html">
+                <a href="<%=request.getContextPath()%>/home">
                     <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
                 </a>
             </li>
@@ -169,10 +169,10 @@
 <!-- navbar -->
 <a href="admin-offcanvas" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"><!--<i class="fa fa-bars" aria-hidden="true"></i>--></a>
 
-<script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/amazeui.min.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/app.js" ></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/charts/echarts.js" ></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/charts/columnarChart.js" ></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/amazeui.min.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/app.js" ></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/echarts.js" ></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/columnarChart.js" ></script>
 <script>
     // 显示文件名
     $(function() {

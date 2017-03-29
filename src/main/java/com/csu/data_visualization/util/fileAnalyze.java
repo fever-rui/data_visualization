@@ -1,5 +1,6 @@
 package com.csu.data_visualization.util;
 
+import org.apache.log4j.Logger;
 import org.springframework.web.multipart.MultipartFile;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +11,11 @@ import java.io.InputStreamReader;
  * Created by ZhangRui on 2017/3/27.
  */
 public class fileAnalyze {
+
+    private static final Logger logger=Logger.getLogger(fileAnalyze.class);
+
     public static String Analyze(MultipartFile file) {
+        logger.info("fileAnalyze函数"+" 参数：file:"+file.getOriginalFilename());
         String resultStr = new String();
         try {
             InputStream fis = file.getInputStream();
@@ -22,7 +27,7 @@ public class fileAnalyze {
             }
             br.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error(e);
         }
         return resultStr;
     }

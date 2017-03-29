@@ -20,16 +20,16 @@ public class data_record {
     private Integer uid;//用户id
 
     @Column(name="create_time")
-    private Date create_time;//创建时间
+    private String create_time;//创建时间
 
     @Column(name="data_info",nullable=false)
     private String data_info;//数据内容
 
-    @Column(name="data_type")
-    private Integer data_type;//图表类型
+    @Column(name="chart_type")
+    private Integer chart_type;//图表类型:1、折线图，2、柱状图，3、扇形图，4、散点图，5、雷达图，6、地图。
 
-    @Column(name="data_name")
-    private Integer data_name;//数据名称
+    @Column(name="data_name", length=20)
+    private String data_name;//数据名称
 
     public Integer getId() {
         return id;
@@ -47,11 +47,11 @@ public class data_record {
         this.uid = uid;
     }
 
-    public Date getCreate_time() {
+    public String getCreate_time() {
         return create_time;
     }
 
-    public void setCreate_time(Date create_time) {
+    public void setCreate_time(String create_time) {
         this.create_time = create_time;
     }
 
@@ -63,19 +63,19 @@ public class data_record {
         this.data_info = data_info;
     }
 
-    public Integer getData_type() {
-        return data_type;
+    public Integer getChart_type() {
+        return chart_type;
     }
 
-    public void setData_type(Integer data_type) {
-        this.data_type = data_type;
+    public void setChart_type(Integer chart_type) {
+        this.chart_type = chart_type;
     }
 
-    public Integer getData_name() {
+    public String getData_name() {
         return data_name;
     }
 
-    public void setData_name(Integer data_name) {
+    public void setData_name(String data_name) {
         this.data_name = data_name;
     }
 }

@@ -34,6 +34,11 @@ public class userService {
         return userDAO.getUserByAccount(account);
     }
 
+    /**
+     * 注册新用户
+     * @param user
+     * @return
+     */
     public boolean addUser(user user) {
         return userDAO.save(user);
     }

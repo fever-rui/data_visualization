@@ -17,15 +17,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/amazeui.min.css"/>
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/amazeui.datatables.min.css"/>
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/app.css">
-    <script src="<%=request.getContextPath()%>/assets/js/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/amazeui.datatables.min.css"/>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/app.css">
+    <script src="<%=request.getContextPath()%>/js/jquery-3.1.1.js"></script>
 
 </head>
 
 <body data-type="login">
-<script src="<%=request.getContextPath()%>/assets/js/theme.js"></script>
+<script src="<%=request.getContextPath()%>/js/theme.js"></script>
 <div class="am-g tpl-g">
     <!-- 风格切换 -->
     <div class="tpl-skiner">
@@ -70,8 +70,8 @@
     </div>
 </div>
 
-<script src="<%=request.getContextPath()%>/assets/js/amazeui.min.js"></script>
-<script src="<%=request.getContextPath()%>/assets/js/app.js"></script>
+<script src="<%=request.getContextPath()%>/js/amazeui.min.js"></script>
+<script src="<%=request.getContextPath()%>/js/app.js"></script>
 
 <script>
     var $inputAccount = $("form input[name = account]");
@@ -97,7 +97,7 @@
 
         $.ajax({
             type 	: 'POST',
-            url		: "login.html",
+            url		: "<%=request.getContextPath()%>/login",
             data 	: {
                 account : $inputAccount.val(),
                 password : $inputPass.val()
