@@ -10,9 +10,9 @@ import java.io.InputStreamReader;
 /**
  * Created by ZhangRui on 2017/3/27.
  */
-public class fileAnalyze {
+public class fileUtil {
 
-    private static final Logger logger=Logger.getLogger(fileAnalyze.class);
+    private static final Logger logger=Logger.getLogger(fileUtil.class);
 
     public static String Analyze(MultipartFile file) {
         logger.info("fileAnalyze函数"+" 参数：file:"+file.getOriginalFilename());

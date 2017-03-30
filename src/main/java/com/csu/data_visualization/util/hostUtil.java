@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Created by ZhangRui on 2017/3/29.
  */
-public class getHost {
+public class hostUtil {
 
-    private static final Logger logger=Logger.getLogger(getHost.class);
+    private static final Logger logger=Logger.getLogger(hostUtil.class);
 
     public static String getRemoteHost(HttpServletRequest request){
         logger.info("getRemoteHost函数"+" 参数："+request);

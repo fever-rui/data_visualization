@@ -25,8 +25,8 @@ public class data_record {
     @Column(name="data_info",nullable=false)
     private String data_info;//数据内容
 
-    @Column(name="chart_type")
-    private Integer chart_type;//图表类型:1、折线图，2、柱状图，3、扇形图，4、散点图，5、雷达图，6、地图。
+    @Column(name="chart_type",length=20)
+    private String chart_type;//图表类型:1、折线图，2、柱状图，3、扇形图，4、散点图，5、雷达图，6、地图。
 
     @Column(name="data_name", length=20)
     private String data_name;//数据名称
@@ -63,11 +63,11 @@ public class data_record {
         this.data_info = data_info;
     }
 
-    public Integer getChart_type() {
+    public String getChart_type() {
         return chart_type;
     }
 
-    public void setChart_type(Integer chart_type) {
+    public void setChart_type(String chart_type) {
         this.chart_type = chart_type;
     }
 

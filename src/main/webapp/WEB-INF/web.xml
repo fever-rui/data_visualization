@@ -24,9 +24,7 @@
     <servlet-name>default</servlet-name>
     <url-pattern>/js/*</url-pattern>
     <url-pattern>/css/*</url-pattern>
-    <url-pattern>/img/*</url-pattern>
     <url-pattern>/fonts/*</url-pattern>
-    <url-pattern>/i/*</url-pattern>
   </servlet-mapping>
 
   //log4j配置文件加载

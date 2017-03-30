@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.csu.data_visualization.model.data_record" %><%--
   Created by IntelliJ IDEA.
   User: fever
   Date: 2017/3/18
@@ -31,38 +32,8 @@
         <%@ include file="header.jsp" %>
     </div>
 
-    <!-- 侧边导航栏 -->
-    <div class="left-sidebar">
-        <ul class="sidebar-nav">
-            <li class="sidebar-nav-link">
-                <a href="<%=request.getContextPath()%>/home">
-                    <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
-                </a>
-            </li>
-            <li class="sidebar-nav-link">
-                <a href="javascript:;" class="sidebar-nav-sub-title active">
-                    <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 图表
-                </a>
-                <ul class="sidebar-nav sidebar-nav-sub" style="display: block;">
-                    <li class="sidebar-nav-link">
-                        <a href="chart_line" class="sub-active">
-                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 折线图
-                        </a>
-                    </li>
-
-                    <li class="sidebar-nav-link">
-                        <a href="chart_columnar.">
-                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 柱状图
-                        </a>
-                    </li>
-                    <li class="sidebar-nav-link">
-                        <a href="chart_pie">
-                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 饼状图
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+    <div>
+        <%@ include file="sidebar_nav.jsp" %>
     </div>
 
 
@@ -81,7 +52,7 @@
                                         <input type="text" class="am-form-field ">
                                         <span class="am-input-group-btn">
                                             <button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search"
-                                            type="button"></button>
+                                                    type="button"></button>
                                         </span>
                                     </div>
                                 </div>
@@ -91,109 +62,59 @@
 
                         <div class="widget-body  am-fr">
                             <div class="am-u-sm-12">
-                                <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black "
+                                <table width="100%" class="am-table  tpl-table-black "
                                        id="example-r">
                                     <thead>
-                                    <tr>
-                                        <th>文件</th>
-                                        <th>图表类型</th>
-                                        <th>详情</th>
-                                        <th>上传时间</th>
-                                        <th>操作</th>
-                                    </tr>
+                                        <tr>
+                                            <th width="30%">文件</th>
+                                            <th width="30%">图表类型</th>
+                                            <th width="30%">上传时间</th>
+                                            <th width="10%">详情</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                    <tr class="gradeX">
-                                        <td>Amaze UI 模式窗口</td>
-                                        <td>张鹏飞</td>
-                                        <td>2016-09-26</td>
-                                        <td>
-                                            <div class="tpl-table-black-operation">
-                                                <a href="javascript:;">
-                                                    <i class="am-icon-pencil"></i> 编辑
-                                                </a>
-                                                <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                    <i class="am-icon-trash"></i> 删除
-                                                </a>
-                                            </div>
-                                        </td>
+                                    <%
+                                        if(request.getAttribute("recordList").equals("-")) {
+                                    %>
+                                    <%--记录为空--%>
+                                    <tr >
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
                                     </tr>
-                                    <tr class="even gradeC">
-                                        <td>有适配微信小程序的计划吗</td>
-                                        <td>天纵之人</td>
-                                        <td>2016-09-26</td>
-                                        <td>
-                                            <div class="tpl-table-black-operation">
-                                                <a href="javascript:;">
-                                                    <i class="am-icon-pencil"></i> 编辑
-                                                </a>
-                                                <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                    <i class="am-icon-trash"></i> 删除
-                                                </a>
+                                    <%
+                                    }else {
+                                        List<data_record> recordList=(List<data_record>)request.getAttribute("recordList");
+                                        for(int i=0;i<recordList.size();i++){
+                                            data_record record=recordList.get(i);
+                                    %>
+                                    <tr id="tr<%=i%>">
+                                        <td ><%=record.getData_name()%></td>
+                                        <td ><%=record.getChart_type()%></td>
+                                        <td ><%=record.getCreate_time().substring(0,19)%></td>
+                                        <td >
+                                            <div class="am-icon-angle-down" id="down<%=i%>" style="display: block;margin-left: 10px;cursor: pointer" onclick="showInfo(this)">
                                             </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="gradeX">
-                                        <td>请问有没有amazeui 分享插件</td>
-                                        <td>王宽师</td>
-                                        <td>2016-09-26</td>
-                                        <td>
-                                            <div class="tpl-table-black-operation">
-                                                <a href="javascript:;">
-                                                    <i class="am-icon-pencil"></i> 编辑
-                                                </a>
-                                                <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                    <i class="am-icon-trash"></i> 删除
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="even gradeC">
-                                        <td>关于input输入框的问题</td>
-                                        <td>着迷</td>
-                                        <td>2016-09-26</td>
-                                        <td>
-                                            <div class="tpl-table-black-operation">
-                                                <a href="javascript:;">
-                                                    <i class="am-icon-pencil"></i> 编辑
-                                                </a>
-                                                <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                    <i class="am-icon-trash"></i> 删除
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="even gradeC">
-                                        <td>有没有发现官网上的下载包不好用</td>
-                                        <td>醉里挑灯看键</td>
-                                        <td>2016-09-26</td>
-                                        <td>
-                                            <div class="tpl-table-black-operation">
-                                                <a href="javascript:;">
-                                                    <i class="am-icon-pencil"></i> 编辑
-                                                </a>
-                                                <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                    <i class="am-icon-trash"></i> 删除
-                                                </a>
+                                            <div class="am-icon-angle-up" id="up<%=i%>" style="display: none;margin-left: 10px;cursor: pointer" onclick="hiddenInfo(this)">
                                             </div>
                                         </td>
                                     </tr>
 
-                                    <tr class="even gradeC">
-                                        <td>我建议WEB版本文件引入问题</td>
-                                        <td>罢了</td>
-                                        <td>2016-09-26</td>
-                                        <td>
-                                            <div class="tpl-table-black-operation">
-                                                <a href="javascript:;">
-                                                    <i class="am-icon-pencil"></i> 编辑
-                                                </a>
-                                                <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                    <i class="am-icon-trash"></i> 删除
-                                                </a>
+                                    <tr id="record<%=i%>" style="display: none;">
+                                        <td colspan="4">
+                                            <div style="min-height: 100px">
+                                                <%=record.getData_info()%>
                                             </div>
                                         </td>
                                     </tr>
+
+                                    <%
+                                            }//for
+                                        }//else
+                                    %>
+
+
                                     <!-- more data -->
                                     </tbody>
                                 </table>
@@ -227,8 +148,7 @@
 <script src="<%=request.getContextPath()%>/js/amazeui.datatables.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/dataTables.responsive.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/app.js"></script>
-
+<script src="<%=request.getContextPath()%>/js/home_page.js"></script>
 </body>
-
 </html>
 

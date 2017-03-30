@@ -1,6 +1,6 @@
 package com.csu.data_visualization.interceptor;
 
-import com.csu.data_visualization.util.getHost;
+import com.csu.data_visualization.util.hostUtil;
 import org.apache.log4j.Logger;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -22,7 +22,7 @@ public class SpringMVCInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request,
                              HttpServletResponse response, Object handler) throws Exception {
-        logger.info("ip:"+ getHost.getRemoteHost(request) +" preHandle函数,拦截器拦截 ");
+        logger.info("ip:"+ hostUtil.getRemoteHost(request) +" preHandle函数,拦截器拦截 ");
 
         HttpSession session=request.getSession();
         String loginUrl = "login";

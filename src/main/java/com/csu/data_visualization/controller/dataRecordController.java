@@ -1,8 +1,8 @@
 package com.csu.data_visualization.controller;
 
 import com.csu.data_visualization.model.data_record;
-import com.csu.data_visualization.util.fileAnalyze;
-import com.csu.data_visualization.util.getHost;
+import com.csu.data_visualization.util.fileUtil;
+import com.csu.data_visualization.util.hostUtil;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -41,7 +41,7 @@ public class dataRecordController {
      * @param dataInfo
      * @return
      */
-    public boolean addRecord(HttpServletRequest request,String fileName,Integer chartType,String dataInfo){
+    public boolean addRecord(HttpServletRequest request,String fileName,String chartType,String dataInfo){
 
         logger.info("用户:"+request.getSession().getAttribute("userAccount")+" 进入addRecord函数 "
                 +" 参数: "+" fileName-"+fileName+" chartType-"+chartType+" dataInfo-"+dataInfo);
@@ -65,10 +65,10 @@ public class dataRecordController {
     @RequestMapping(value = "/columnar_fileLoad", method = RequestMethod.POST)
     public String columnar_fileLoad(HttpServletRequest request,@RequestParam("file") MultipartFile file) {
 
-        logger.info("ip:"+ getHost.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
                 +" 进入columnar_fileLoad函数"+" 参数："+" file:"+file.getOriginalFilename());
 
-        return fileAnalyze.Analyze(file);
+        return fileUtil.Analyze(file);
     }
 
     /**
@@ -80,10 +80,10 @@ public class dataRecordController {
     @RequestMapping(value = "/line_fileLoad", method = RequestMethod.POST)
     public String line_fileLoad(HttpServletRequest request,@RequestParam("file") MultipartFile file) {
 
-        logger.info("ip:"+ getHost.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
                 +" 进入line_fileLoad函数"+" 参数："+" file:"+file.getOriginalFilename());
 
-        return fileAnalyze.Analyze(file);
+        return fileUtil.Analyze(file);
     }
 
     /**
@@ -95,16 +95,16 @@ public class dataRecordController {
     @RequestMapping(value = "/pie_fileLoad", method = RequestMethod.POST, produces = "text/html;charset=UTF-8")
     public String pie_fileLoad(HttpServletRequest request,@RequestParam("file") MultipartFile file) {
 
-        logger.info("ip:"+ getHost.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
                 +" 进入pie_fileLoad函数"+" 参数："+" file:"+file.getOriginalFilename());
 
-        String result=fileAnalyze.Analyze(file);
+        String result= fileUtil.Analyze(file);
         try {
             URLEncoder.encode(result,"UTF-8");
         } catch (UnsupportedEncodingException e) {
             logger.error(e);
         }
-        addRecord(request,file.getOriginalFilename(),3,result);
+        addRecord(request,file.getOriginalFilename(),"扇形图",result);
         return result;
     }
 }
