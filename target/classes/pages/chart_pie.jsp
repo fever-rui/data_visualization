@@ -43,23 +43,9 @@
         <div class="container-fluid am-cf">
             <div class="row">
                 <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
-                    <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span>饼状图</div>
+                    <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span>扇形图</div>
                     <p class="page-header-description">图表组件使用的是 <a href="http://echarts.baidu.com">百度图表echarts</a></p>
                 </div>
-
-                <%--<form  class="am-u-sm-12 am-u-md-3" id="fileForm" action="<%=request.getContextPath()%>/record/pie_fileLoad" method="post" enctype="multipart/form-data">--%>
-                    <%--<div class="am-form-group am-form-file">--%>
-                        <%--<button type="button" class="am-btn am-btn-danger am-btn-sm">--%>
-                            <%--<i class="am-icon-cloud-upload"></i> 添加文件</button>--%>
-                        <%--<input id="doc-form-file" type="file" name="file">--%>
-                    <%--</div>--%>
-                    <%--<div id="file-list"></div>--%>
-                    <%--<button class="am-btn am-btn-default am-btn-sm" type="submit">提交</button>--%>
-                    <%--<!-- 显示excel上传结果返回显示 -->--%>
-                    <%--<div id="excel-return">--%>
-
-                    <%--</div>--%>
-                <%--</form>--%>
 
                 <form  class="am-u-sm-12 am-u-md-3" id="fileForm" id="fileForm"  method="post" enctype="multipart/form-data">
                     <div class="am-form-group am-form-file">
@@ -76,10 +62,16 @@
                     </div>
                 </form>
 
-                <button class="am-btn am-btn-primary" style="margin-left: 10px">
-                    下载数据模板
-                    <i class="am-icon-cloud-download"></i>
-                </button>
+                <form  method="post" action="/record/pie_fileDownLoad">
+                    <button class="am-btn am-btn-primary   am-btn-sm" style="margin-left: 10px" type="submit" >
+                        下载数据模板
+                        <i class="am-icon-cloud-download"></i>
+                    </button>
+                </form>
+
+                <div style="margin-left: 10px">
+                    <p class="page-header-description">注:txt文件应保存成UTF-8。</p>
+                </div>
 
             </div>
 
@@ -98,17 +90,17 @@
                 </div>
             </div>
 
-            <div class="widget am-cf">
-                <div class="widget-head am-cf">
-                    <div class="widget-title am-fl">环形图</div>
-                    <div class="widget-function am-fr">
-                        <a href="javascript:;"></a>
-                    </div>
-                </div>
-                <div class="widget-body am-fr">
-                    <div  id="pie2" style="width: 100%;height: 400px;"></div>
-                </div>
-            </div>
+            <%--<div class="widget am-cf">--%>
+                <%--<div class="widget-head am-cf">--%>
+                    <%--<div class="widget-title am-fl">嵌套环形图</div>--%>
+                    <%--<div class="widget-function am-fr">--%>
+                        <%--<a href="javascript:;"></a>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+                <%--<div class="widget-body am-fr">--%>
+                    <%--<div  id="pie2" style="width: 100%;height: 400px;"></div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
 
             <div class="widget am-cf">
                 <div class="widget-head am-cf">
@@ -156,6 +148,18 @@
         </div>
     </div>
 
+
+    <div class="am-modal am-modal-no-btn" tabindex="-1" id="typeFalse-model">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">Failure
+                <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+            </div>
+            <div class="am-modal-hd">
+                文件类型错误,请选择txt文件
+            </div>
+        </div>
+    </div>
+
     <div class="am-modal am-modal-no-btn" tabindex="-1" id="failure-model">
         <div class="am-modal-dialog">
             <div class="am-modal-hd">Failure
@@ -163,6 +167,17 @@
             </div>
             <div class="am-modal-hd">
                 文件导入失败
+            </div>
+        </div>
+    </div>
+
+    <div class="am-modal am-modal-no-btn" tabindex="-1" id="downloadFailure-model">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">Failure
+                <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+            </div>
+            <div class="am-modal-hd">
+                数据模板下载失败
             </div>
         </div>
     </div>

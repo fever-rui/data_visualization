@@ -13,8 +13,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.BufferedOutputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
@@ -97,22 +100,29 @@ public class dataRecordController {
 
         logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
                 +" 进入pie_fileLoad函数"+" 参数："+" file:"+file.getOriginalFilename());
-
-        String result= fileUtil.Analyze(file);
-        try {
-            URLEncoder.encode(result,"UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            logger.error(e);
+        if(!fileUtil.isTxt(file.getOriginalFilename())) {
+            return "false";
+        }else {
+            String result= fileUtil.Analyze(file);
+            try {
+                URLEncoder.encode(result,"UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                logger.error(e);
+            }
+            addRecord(request,file.getOriginalFilename(),"扇形图",result);
+            return result;
         }
-        addRecord(request,file.getOriginalFilename(),"扇形图",result);
-        return result;
     }
 
+    /**
+     * 扇形图数据模板
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/pie_fileDownLoad")
-    public String pie_fileDownLoad(HttpServletRequest request) {
+    public void pie_fileDownLoad(HttpServletRequest request, HttpServletResponse response) {
         logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
                 +" 进入pie_fileDownLoad函数");
-        String result="";
-        return result;
+        fileUtil.writeToTxt(response);
     }
 }
