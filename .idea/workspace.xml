@@ -5,105 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dbcb0cd-4542-4773-a519-de67fac5e9eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/pages/sidebar_nav.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/home_page.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/app-icon72x72@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/examples/admin-chrome.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/examples/admin-firefox.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/examples/admin-ie.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/examples/admin-opera.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/examples/admin-safari.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/examples/adminPage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/examples/blogPage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/examples/landing.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/examples/landingPage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/examples/loginPage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/examples/sidebarPage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/i/startup-640x1096.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/img/a5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/img/k.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/img/logoa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/img/logob.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/img/user01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/img/user02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/img/user03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/img/user04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/img/user05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/img/user06.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/img/user07.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/controller/userController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/util/fileAnalyze.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/util/getHost.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/util/fileAnalyze.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/util/getHost.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/app-icon72x72@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/examples/admin-chrome.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/examples/admin-firefox.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/examples/admin-ie.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/examples/admin-opera.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/examples/admin-safari.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/examples/adminPage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/examples/blogPage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/examples/landing.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/examples/landingPage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/examples/loginPage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/examples/sidebarPage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/i/startup-640x1096.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/img/a5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/img/k.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/img/logoa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/img/logob.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/img/user01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/img/user02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/img/user03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/img/user04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/img/user05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/img/user06.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/img/user07.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/controller/dataRecordController.class" afterPath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/controller/dataRecordController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/dao/DataRecordDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/dao/DataRecordDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/dao/UserDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/dao/UserDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/interceptor/SpringMVCInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/interceptor/SpringMVCInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/model/data_record.class" afterPath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/model/data_record.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/service/dataRecordService.class" afterPath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/service/dataRecordService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/service/userService.class" afterPath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/service/userService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/controller/dataRecordController.class" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/controller/dataRecordController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/controller/userController.class" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/controller/userController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/dao/DataRecordDAO.class" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/dao/DataRecordDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/dao/UserDAO.class" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/dao/UserDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/interceptor/SpringMVCInterceptor.class" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/interceptor/SpringMVCInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/model/data_record.class" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/model/data_record.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/service/dataRecordService.class" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/service/dataRecordService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/service/userService.class" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/service/userService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/register.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/dataRecordController.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/dataRecordController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/userController.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/userController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/dao/DataRecordDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/dao/DataRecordDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/dao/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/dao/UserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/interceptor/SpringMVCInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/interceptor/SpringMVCInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/model/data_record.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/model/data_record.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/service/dataRecordService.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/service/dataRecordService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/service/userService.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/service/userService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/chart_columnar.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/chart_columnar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/chart_line.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/chart_line.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/home_page.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/home_page.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/chart_columnar.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/chart_columnar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/chart_line.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/chart_line.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/login.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/register.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/register.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/chart_pie.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/chart_pie.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/home_page.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/home_page.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_columnar.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_columnar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_line.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_line.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/login.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/register.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/register.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_pie.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_pie.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/home_page.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/home_page.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/web.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/fileAnalyze.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/fileUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/getHost.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/hostUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/login.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/register.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/register.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/index.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/js/charts/pieChart.js" afterPath="$PROJECT_DIR$/target/data_visualization/js/charts/pieChart.js" />
     </list>
     <ignored path="data_visualization.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -136,7 +54,45 @@
     <favorites_list name="data_visualization" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="pieChart.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3417">
+              <caret line="304" column="35" selection-start-line="304" selection-start-column="35" selection-end-line="304" selection-end-column="35" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chart_pie.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="78" column="78" selection-start-line="78" selection-start-column="78" selection-end-line="78" selection-end-column="78" />
+              <folding>
+                <element signature="e#6076#6083#0#HTML" expanded="true" />
+                <element signature="e#6470#6477#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataRecordController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/dataRecordController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="115" column="22" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -161,9 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/chart_refresh.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/chart_interaction.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/chart_line.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/chart_pie.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/assets/css/amazeui.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" />
@@ -193,16 +146,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/pages/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/pages/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/interceptor/SpringMVCInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/model/data_record.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/dataRecordController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/service/userService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/pages/sidebar_nav.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/pages/chart_columnar.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/pages/chart_line.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
@@ -212,6 +160,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/dao/DataRecordDAO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/pages/home_page.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/userController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/pages/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/register.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/pages/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/login.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/dataRecordController.java" />
       </list>
     </option>
   </component>
@@ -274,9 +230,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -332,6 +288,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -721,10 +733,7 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <method>
-        <option name="Make" enabled="true" />
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
@@ -747,10 +756,7 @@
       <Profilers>
         <option name="GAPID_DISABLE_PCS" value="false" />
       </Profilers>
-      <method>
-        <option name="Make" enabled="true" />
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -1233,12 +1239,13 @@
       <workItem from="1490691476164" duration="1866000" />
       <workItem from="1490714325721" duration="19562000" />
       <workItem from="1490774100442" duration="28805000" />
-      <workItem from="1490860401521" duration="33706000" />
+      <workItem from="1490860401521" duration="33973000" />
+      <workItem from="1490924959457" duration="6355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223293000" />
+    <option name="totallyTimeSpent" value="229915000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1251,7 +1258,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1275,7 +1282,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27868852" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29016393" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22692889" sideWeight="0.5089514" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1326,142 +1333,26 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_columnar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_line.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/sidebarPage.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/landingPage.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/adminPage.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/admin-ie.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/admin-firefox.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/admin-chrome.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/startup-640x1096.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/favicon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/app-icon72x72@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/k.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user07.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user06.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user05.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user04.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user03.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user02.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user01.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/logob.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/logoa.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/a5.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/blogPage.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/landing.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/loginPage.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/admin-firefox.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/admin-chrome.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/startup-640x1096.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/favicon.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/app-icon72x72@2x.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/k.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user07.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user06.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user05.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user04.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user03.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user02.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/user01.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/logob.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/logoa.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/logo.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/a5.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/blogPage.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/landing.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/i/examples/loginPage.png" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1528,9 +1419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-30">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1582,7 +1470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-30">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1591,26 +1478,6 @@
         <state relative-caret-position="-30">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4330">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home_page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc;n#showInfo#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1638,22 +1505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1623">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1949">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/userController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3046">
@@ -1664,18 +1515,109 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-303">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home_page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding>
+            <element signature="n#!!doc;n#showInfo#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_line.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1693">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="109" column="7" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="126" column="18" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/pages/home_page.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="86" column="36" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="42" />
+        <state relative-caret-position="208">
+          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="69" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="81" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3417">
+          <caret line="304" column="35" selection-start-line="304" selection-start-column="35" selection-end-line="304" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="78" column="78" selection-start-line="78" selection-start-column="78" selection-end-line="78" selection-end-column="78" />
+          <folding>
+            <element signature="e#6076#6083#0#HTML" expanded="true" />
+            <element signature="e#6470#6477#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/dataRecordController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="778">
-          <caret line="70" column="38" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+        <state relative-caret-position="228">
+          <caret line="115" column="22" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

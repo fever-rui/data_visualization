@@ -107,4 +107,12 @@ public class dataRecordController {
         addRecord(request,file.getOriginalFilename(),"扇形图",result);
         return result;
     }
+
+    @RequestMapping(value = "/pie_fileDownLoad")
+    public String pie_fileDownLoad(HttpServletRequest request) {
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入pie_fileDownLoad函数");
+        String result="";
+        return result;
+    }
 }

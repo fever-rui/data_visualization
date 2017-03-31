@@ -293,7 +293,7 @@ function removeFile() {
 
 $('#fileSubmit').click(function () {
     if($("#doc-form-file").val() == "") {
-        alert("请先选择文件");
+        $('#alertSelectFile').modal();
     }else {
         var form = new FormData(document.getElementById("fileForm"));
         $.ajax({
@@ -304,11 +304,11 @@ $('#fileSubmit').click(function () {
             contentType:false,
             success:function(data){
                 removeFile();
-                alert("success");
+                $('#success-model').modal();
                 modifyChart(data);
             },
-            error:function(e){
-                alert("错误！！");
+            error:function(){
+                $('#failure-model').modal();
             }
         });
     }

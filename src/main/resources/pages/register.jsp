@@ -79,64 +79,60 @@
                 </fieldset>
             </form>
         </div>
+
+        <div class="am-modal am-modal-alert" tabindex="-1" id="alertAccount">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">请输入账号</div>
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn">确定</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="am-modal am-modal-alert" tabindex="-1" id="alertName">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">请输入用户名</div>
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn">确定</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="am-modal am-modal-alert" tabindex="-1" id="alertPassword">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">请输入密码</div>
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn">确定</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="am-modal am-modal-alert" tabindex="-1" id="alertExist">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">账户已经注册</div>
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn">确定</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="am-modal am-modal-alert" tabindex="-1" id="alertFalse">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">注册信息有误/div>
+                    <div class="am-modal-footer">
+                        <span class="am-modal-btn">确定</span>
+                    </div>
+                </div>
+            </div>
+
     </div>
 </div>
 
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/amazeui.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/app.js"></script>
-<script>
-    var $inputAccount = $("form input[name = account]");
-    var $inputPass = $("form input[name = password]");
-    var $inputName = $("form input[name = name]");
+<script src="<%=request.getContextPath()%>/js/register.js"></script>
 
-    var inputAccountVal,inputPassVal,inputNameVal;
-
-    $('#registerButton').click(function () {
-        inputAccountVal = $inputAccount.val().trim();
-        inputPassVal = $inputPass.val().trim();
-        inputNameVal = $inputName.val().trim();
-
-        // 如果账号、昵称或者密码没有输入则阻止提交
-        if (inputAccountVal === "") {
-            alert("请输入账号")
-            $inputAccount.focus();
-            return false;
-        }
-        if (inputNameVal === "") {
-            alert("请输入用户名")
-            $inputName.focus();
-            return false;
-        }
-        if (inputPassVal === "") {
-            alert("请输入密码")
-            $inputPass.focus();
-            return false;
-        }
-
-        $.ajax({
-            type: 'POST',
-            url: "register.html",
-            data: {
-                account: $inputAccount.val(),
-                name: $inputName.val(),
-                password: $inputPass.val()
-            },
-            dataType: "json",
-            success: function (data) {
-                if (data.result === "true") {
-                    window.location.href = "home";
-                } else if(data.result === "exist") {
-                    alert("账号已经注册")
-                } else {
-                    alert("输入信息有误");
-                }
-            },
-            error: function () {
-                console.log("error");
-            },
-        });
-    })
-</script>
 
 </body>
 </html>

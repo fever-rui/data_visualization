@@ -63,59 +63,48 @@
                         <div class="am-form-group ">
                             <a href="registerView" class="text-muted" id="register"><i class="fa fa-lock m-r-5"></i> 没有账号？请先注册</a>
                         </div>
+
+
+
                     </div>
                 </fieldset>
             </form>
         </div>
+
+
+        <div class="am-modal am-modal-alert" tabindex="-1" id="alertAccount">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">请输入账号</div>
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn">确定</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="am-modal am-modal-alert" tabindex="-1" id="alertPassword">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">请输入密码</div>
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn">确定</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="am-modal am-modal-alert" tabindex="-1" id="alertFalse">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">账户或密码错误</div>
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn">确定</span>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
 <script src="<%=request.getContextPath()%>/js/amazeui.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/app.js"></script>
-
-<script>
-    var $inputAccount = $("form input[name = account]");
-    var $inputPass = $("form input[name = password]");
-
-    var inputAccountVal,inputPassVal;
-
-    $('#loginButton').click(function () {
-        inputAccountVal = $inputAccount.val().trim();
-        inputPassVal = $inputPass.val().trim();
-
-        // 如果账户名或者密码没有输入则阻止提交
-        if(inputAccountVal===""){
-            alert("请输入账号")
-            $inputAccount.focus();
-            return false;
-        }
-        if(inputPassVal===""){
-            alert("请输入密码")
-            $inputPass.focus();
-            return false;
-        }
-
-        $.ajax({
-            type 	: 'POST',
-            url		: "<%=request.getContextPath()%>/login",
-            data 	: {
-                account : $inputAccount.val(),
-                password : $inputPass.val()
-            },
-            dataType : "json",
-            success : function (data){
-                if(data.result === "true"){
-                    window.location.href = "home";
-                } else {
-                    alert("账号或密码错误")
-                }
-            },
-            error : function(){
-                console.log("error");
-            },
-        });
-    })
-</script>
+<script src="<%=request.getContextPath()%>/js/login.js"></script>
 
 </body>
 </html>
