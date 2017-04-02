@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by ZhangRui on 2017/3/29.
+ * 用于获取ip
  */
 public class hostUtil {
 

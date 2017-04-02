@@ -13,11 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.ServletOutputStream;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.BufferedOutputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
@@ -34,6 +33,7 @@ public class dataRecordController {
     private static final Logger logger = org.apache.log4j.Logger.getLogger(dataRecordController.class);
     @Autowired
     private dataRecordService dataRecordService;
+
 
 
     /**

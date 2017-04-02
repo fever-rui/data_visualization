@@ -1,8 +1,8 @@
 package com.csu.data_visualization.service;
 
 import com.csu.data_visualization.dao.DataRecordDAO;
+import com.csu.data_visualization.model.Page;
 import com.csu.data_visualization.model.data_record;
-import com.csu.data_visualization.util.hostUtil;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,8 +33,23 @@ public class dataRecordService {
         return dataRecordDAO.save(record);
     }
 
+    /**
+     * 根据id获取记录
+     * @param id
+     * @return
+     */
     public List<data_record> getRecordByUid(Integer id) {
         logger.info("进入getRecordByUid函数"+" 参数:"+" id-"+id);
         return dataRecordDAO.getRecordByUid(id);
+    }
+
+    public List<data_record> getAllRecordByUid(Integer id,Page page) {
+        logger.info("进入getAllRecordByUid函数"+" 参数:"+" id-"+id);
+        return dataRecordDAO.getAllRecordByUid(id, page);
+    }
+
+    public Integer getRecordSize(Integer id) {
+        logger.info("进入getRecordSize函数"+" 参数:"+" id-"+id);
+        return dataRecordDAO.getRecordSize(id);
     }
 }

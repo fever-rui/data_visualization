@@ -23,6 +23,8 @@ $('#loginButton').click(function () {
         return false;
     }
 
+    $.AMUI.progress.start()
+
     $.ajax({
         type 	: 'POST',
         url		: "login",
@@ -32,6 +34,7 @@ $('#loginButton').click(function () {
         },
         dataType : "json",
         success : function (data){
+            setTimeout("$.AMUI.progress.done()", 5000 )
             if(data.result === "true"){
                 window.location.href = "home";
             } else {
@@ -39,6 +42,7 @@ $('#loginButton').click(function () {
             }
         },
         error : function(){
+            $.AMUI.progress.done();
             console.log("error");
         },
     });

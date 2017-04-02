@@ -1,9 +1,11 @@
 package com.csu.data_visualization.controller;
 
+import com.csu.data_visualization.model.Page;
 import com.csu.data_visualization.model.data_record;
 import com.csu.data_visualization.model.user;
 import com.csu.data_visualization.service.dataRecordService;
 import com.csu.data_visualization.service.userService;
+import com.csu.data_visualization.util.PageUtil;
 import com.csu.data_visualization.util.hostUtil;
 import org.apache.log4j.Logger;
 import org.json.JSONObject;
@@ -32,6 +34,10 @@ public class userController {
     private userService userService;
     @Autowired
     private dataRecordService dataRecordService;
+
+    Page page;
+
+
 
     /**
      * 获取所有用户
@@ -86,7 +92,9 @@ public class userController {
         if(uid==null){
             model.addObject("recordList","-");
         }else{
-            List<data_record> recordList = dataRecordService.getRecordByUid(uid);
+//            List<data_record> recordList = dataRecordService.getRecordByUid(uid);
+            page=PageUtil.createPage(0,dataRecordService.getRecordSize(uid),0);
+            List<data_record> recordList = dataRecordService.getAllRecordByUid(uid, page);
             model.addObject("recordList", recordList);
         }
         //设置页面
