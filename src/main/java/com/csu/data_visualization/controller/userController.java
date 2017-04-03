@@ -93,9 +93,10 @@ public class userController {
             model.addObject("recordList","-");
         }else{
 //            List<data_record> recordList = dataRecordService.getRecordByUid(uid);
-            page=PageUtil.createPage(0,dataRecordService.getRecordSize(uid),0);
+            page=PageUtil.createPage(15,dataRecordService.getRecordSize(uid),1);
             List<data_record> recordList = dataRecordService.getAllRecordByUid(uid, page);
             model.addObject("recordList", recordList);
+            model.addObject("page",page);
         }
         //设置页面
         model.setViewName("home_page");

@@ -119,25 +119,43 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="am-u-lg-12 am-cf">
 
+
+
+                            <%--<div class="am-u-lg-12 am-cf">--%>
+
+                                <%--<div class="am-fr">--%>
+                                    <%--<ul class="am-pagination tpl-pagination">--%>
+                                        <%--<li class="am-disabled"><a href="#">«</a></li>--%>
+                                        <%--<li class="am-active"><a href="#">1</a></li>--%>
+                                        <%--<li><a href="#">2</a></li>--%>
+                                        <%--<li><a href="#">3</a></li>--%>
+                                        <%--<li><a href="#">4</a></li>--%>
+                                        <%--<li><a href="#">5</a></li>--%>
+                                        <%--<li><a href="#">»</a></li>--%>
+                                    <%--</ul>--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
+                            <div class="am-u-lg-12 am-cf">
                                 <div class="am-fr">
-                                    <ul class="am-pagination tpl-pagination">
-                                        <li class="am-disabled"><a href="#">«</a></li>
-                                        <li class="am-active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li><a href="#">»</a></li>
-                                    </ul>
-                                </div>
+                                    <div id="page">
+                                        <ul class="am-pagination tpl-pagination">
+                                            <li><a href="javascript:" data-page="7">&lt;</a></li>
+                                            <li><a href="javascript:" data-page="1">首页</a></li>
+                                            <span>...</span>
+                                            <li><a href="javascript:" data-page="4">4</a></li>
+                                            <li><a href="javascript:" data-page="5">5</a></li>
+                                            <li><a href="javascript:" data-page="6">6</a></li>
+                                            <li><a href="javascript:" data-page="7">7</a></li>
+                                            <li class="am-active"><a href="javascript:" data-page="8">8</a></li>
+                                            <li><a href="javascript:" data-page="8">最后一页</a></li>
+                                        </ul>
+                                <%--</div>--%>
                             </div>
                         </div>
-
-
-
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -149,6 +167,7 @@
 <script src="<%=request.getContextPath()%>/js/dataTables.responsive.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/app.js"></script>
 <script src="<%=request.getContextPath()%>/js/home_page.js"></script>
+<script src="<%=request.getContextPath()%>/js/amazeui.page.js"></script>
 </body>
 </html>
 
