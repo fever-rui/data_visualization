@@ -183,6 +183,10 @@
     </div>
 
 </div>
+
+<%@ include file="go_top.jsp" %>
+
+
 </div>
 
 <!-- navbar -->

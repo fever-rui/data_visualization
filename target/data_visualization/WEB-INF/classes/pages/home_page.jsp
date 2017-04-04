@@ -1,5 +1,7 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.csu.data_visualization.model.data_record" %><%--
+<%@ page import="com.csu.data_visualization.model.data_record" %>
+<%@ page import="com.csu.data_visualization.model.Page" %>
+<%--
   Created by IntelliJ IDEA.
   User: fever
   Date: 2017/3/18
@@ -48,13 +50,16 @@
                                 <span style="vertical-align: middle;font-size: 17px">记录</span>
 
                                 <div class="am-u-sm-12 am-u-md-12 am-u-lg-3" style="float: right">
-                                    <div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
-                                        <input type="text" class="am-form-field ">
-                                        <span class="am-input-group-btn">
+                                    <form action="<%=request.getContextPath()%>/search" method="get">
+                                        <div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
+                                            <input type="text" class="am-form-field " name="key" id="key" placeholder="请输入文件名" value=<%=request.getAttribute("key")%>>
+                                            <span class="am-input-group-btn">
                                             <button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search"
-                                                    type="button"></button>
+                                                    type="submit"></button>
                                         </span>
-                                    </div>
+                                        </div>
+                                    </form>
+
                                 </div>
                             </div>
                         </div>
@@ -89,7 +94,7 @@
                                         for(int i=0;i<recordList.size();i++){
                                             data_record record=recordList.get(i);
                                     %>
-                                    <tr id="tr<%=i%>">
+                                    <tr id="tr<%=i%>" >
                                         <td ><%=record.getData_name()%></td>
                                         <td ><%=record.getChart_type()%></td>
                                         <td ><%=record.getCreate_time().substring(0,19)%></td>
@@ -101,7 +106,7 @@
                                         </td>
                                     </tr>
 
-                                    <tr id="record<%=i%>" style="display: none;">
+                                    <tr id="record<%=i%>"  style="display: none;">
                                         <td colspan="4">
                                             <div style="min-height: 100px">
                                                 <%=record.getData_info()%>
@@ -120,54 +125,94 @@
                                 </table>
                             </div>
 
-
-
-                            <%--<div class="am-u-lg-12 am-cf">--%>
-
-                                <%--<div class="am-fr">--%>
-                                    <%--<ul class="am-pagination tpl-pagination">--%>
-                                        <%--<li class="am-disabled"><a href="#">«</a></li>--%>
-                                        <%--<li class="am-active"><a href="#">1</a></li>--%>
-                                        <%--<li><a href="#">2</a></li>--%>
-                                        <%--<li><a href="#">3</a></li>--%>
-                                        <%--<li><a href="#">4</a></li>--%>
-                                        <%--<li><a href="#">5</a></li>--%>
-                                        <%--<li><a href="#">»</a></li>--%>
-                                    <%--</ul>--%>
-                                <%--</div>--%>
-                            <%--</div>--%>
                             <div class="am-u-lg-12 am-cf">
                                 <div class="am-fr">
-                                    <div id="page">
-                                        <ul class="am-pagination tpl-pagination">
-                                            <li><a href="javascript:" data-page="7">&lt;</a></li>
-                                            <li><a href="javascript:" data-page="1">首页</a></li>
-                                            <span>...</span>
-                                            <li><a href="javascript:" data-page="4">4</a></li>
-                                            <li><a href="javascript:" data-page="5">5</a></li>
-                                            <li><a href="javascript:" data-page="6">6</a></li>
-                                            <li><a href="javascript:" data-page="7">7</a></li>
-                                            <li class="am-active"><a href="javascript:" data-page="8">8</a></li>
-                                            <li><a href="javascript:" data-page="8">最后一页</a></li>
-                                        </ul>
-                                <%--</div>--%>
+                                    <ul class="am-pagination tpl-pagination"></ul>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
+                        </div>
 
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+    <div>
+        <%@ include file="go_top.jsp" %>
+    </div>
+
 </div>
 <script src="<%=request.getContextPath()%>/js/amazeui.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/amazeui.datatables.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/dataTables.responsive.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/app.js"></script>
 <script src="<%=request.getContextPath()%>/js/home_page.js"></script>
-<script src="<%=request.getContextPath()%>/js/amazeui.page.js"></script>
+<%--<script src="<%=request.getContextPath()%>/js/amazeui.page.js"></script>--%>
+<script src="<%=request.getContextPath()%>/js/amazeui-pagination.js"></script>
+<script>
+    <% Page pageClass=(Page)request.getAttribute("page"); %>
+    var index=0;
+//    var inputElement=document.getElementById("key");
+//    var key=inputElement.value;
+    
+    function modifyTable(list) {
+        for(var i=0;i<10;i++){
+            if(i<list.length){
+                var tr1=document.getElementById("tr"+i);
+                tr1.firstElementChild.innerHTML=list[i].data_name;
+                tr1.firstElementChild.nextElementSibling.innerHTML=list[i].chart_type;
+                tr1.firstElementChild.nextElementSibling.nextElementSibling.innerHTML=list[i].create_time.substring(0,19);
+                tr1.style.display="table-row";
+                tr1.lastElementChild.firstElementChild.style.display="block";
+                tr1.lastElementChild.lastElementChild.style.display="none";
+
+                var tr2=document.getElementById("record"+i);
+                tr2.style.display="none";
+                tr2.firstElementChild.firstElementChild.innerHTML=list[i].data_info;
+            }else {
+                var tr1=document.getElementById("tr"+i);
+                tr1.style.display="none";
+                var tr2=document.getElementById("record"+i);
+                tr2.style.display="none";
+            }
+
+
+        }
+    }
+
+    var pagination = new Pagination({
+
+        wrap: $('.am-pagination'),
+        current:<%=pageClass.getCurrentPage()%>,
+        count: <%=pageClass.getTotalPage()%>,
+        prevText: '上一页',
+        nextText: '下一页',
+        callback: function(page) {
+            console.log(page);
+            index=page;
+            $.ajax({
+                url		: "/page",
+                data 	: {
+                    index : index,
+                    key   : document.getElementById("key").value
+                },
+                dataType : "json",
+                success : function (data){
+                    console.log("test")
+//                    var jsonData=JSON.parse(data);
+                    var list=data.recordList;
+                    modifyTable(list);
+                },
+                error : function(){
+//                    $.AMUI.progress.done();
+                    console.log("error");
+                },
+            });
+        }
+    });
+</script>
 </body>
 </html>
 

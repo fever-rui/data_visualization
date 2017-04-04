@@ -34,22 +34,40 @@ public class dataRecordService {
     }
 
     /**
-     * 根据id获取记录
+     * 根据id查询记录
      * @param id
+     * @param page
      * @return
      */
-    public List<data_record> getRecordByUid(Integer id) {
-        logger.info("进入getRecordByUid函数"+" 参数:"+" id-"+id);
-        return dataRecordDAO.getRecordByUid(id);
-    }
-
     public List<data_record> getAllRecordByUid(Integer id,Page page) {
         logger.info("进入getAllRecordByUid函数"+" 参数:"+" id-"+id);
         return dataRecordDAO.getAllRecordByUid(id, page);
     }
 
+    /**
+     * 根据id查询记录总数
+     * @param id
+     * @return
+     */
     public Integer getRecordSize(Integer id) {
         logger.info("进入getRecordSize函数"+" 参数:"+" id-"+id);
         return dataRecordDAO.getRecordSize(id);
+    }
+
+    /**
+     * 根据 id，key模糊查询
+     * @param id
+     * @param key
+     * @param page
+     * @return
+     */
+    public List<data_record> getRecordByDataName(Integer id,String key,final Page page) {
+        logger.info("进入getRecordByDataName函数"+" 参数:"+" id-"+id+" key:"+ key+" page:"+ page);
+        return dataRecordDAO.getRecordByDataName(id,key,page);
+    }
+
+    public Integer getRecordSizeByKey(Integer id,String key) {
+        logger.info("进入getRecordSizeByKey函数"+" 参数:"+" id-"+id+" key:"+ key);
+        return dataRecordDAO.getRecordSizeByKey(id,key);
     }
 }

@@ -34,8 +34,6 @@ public class dataRecordController {
     @Autowired
     private dataRecordService dataRecordService;
 
-
-
     /**
      * 添加新纪录
      * @param request

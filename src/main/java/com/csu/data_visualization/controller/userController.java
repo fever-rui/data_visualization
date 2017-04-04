@@ -35,9 +35,6 @@ public class userController {
     @Autowired
     private dataRecordService dataRecordService;
 
-    Page page;
-
-
 
     /**
      * 获取所有用户
@@ -92,11 +89,68 @@ public class userController {
         if(uid==null){
             model.addObject("recordList","-");
         }else{
-//            List<data_record> recordList = dataRecordService.getRecordByUid(uid);
-            page=PageUtil.createPage(15,dataRecordService.getRecordSize(uid),1);
+            Page page=PageUtil.createPage(10,dataRecordService.getRecordSize(uid),1);
             List<data_record> recordList = dataRecordService.getAllRecordByUid(uid, page);
             model.addObject("recordList", recordList);
             model.addObject("page",page);
+            model.addObject("key","");
+        }
+        //设置页面
+        model.setViewName("home_page");
+        return model;
+    }
+
+    /**
+     * 分页更改数据
+     * @param request
+     * @param index
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/page", produces="application/json; charset=utf-8")
+    public String doPage(HttpServletRequest request,Integer index,String key) {
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+"用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入doPage函数 ");
+
+        JSONObject result=new JSONObject();
+        //获取记录
+        Integer uid=(Integer) request.getSession().getAttribute("uid");
+        Page page=PageUtil.createPage(10,dataRecordService.getRecordSizeByKey(uid,key),index);
+        if(key==null) {
+            key="";
+        }
+//        List<data_record> recordList = dataRecordService.getAllRecordByUid(uid, page);
+        List<data_record> recordList = dataRecordService.getRecordByDataName(uid,key,page);
+        result.put("recordList", recordList);
+        result.put("page",page);
+
+        //设置页面
+        return result.toString();
+    }
+
+    /**
+     * 查询
+     * @param model
+     * @param request
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/search", produces="application/html; charset=utf-8")
+    public ModelAndView search(ModelAndView model,HttpServletRequest request,String key) {
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+"用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入search函数 "+" 参数:"+" key:"+ key);
+
+        //获取记录
+        Integer uid=(Integer) request.getSession().getAttribute("uid");
+        if(uid==null){
+            model.addObject("recordList","-");
+        }else{
+            Page page=PageUtil.createPage(10,dataRecordService.getRecordSizeByKey(uid,key),1);
+            List<data_record> recordList = dataRecordService.getRecordByDataName(uid,key,page);
+            model.addObject("recordList", recordList);
+            model.addObject("page",page);
+            model.addObject("key",key);
+//            request.getSession().setAttribute("key",key);
         }
         //设置页面
         model.setViewName("home_page");

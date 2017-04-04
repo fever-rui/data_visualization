@@ -24,6 +24,7 @@ $('#loginButton').click(function () {
     }
 
     $.AMUI.progress.start()
+    setTimeout("$.AMUI.progress.done()", 3000 )
 
     $.ajax({
         type 	: 'POST',
@@ -34,7 +35,7 @@ $('#loginButton').click(function () {
         },
         dataType : "json",
         success : function (data){
-            setTimeout("$.AMUI.progress.done()", 5000 )
+
             if(data.result === "true"){
                 window.location.href = "home";
             } else {

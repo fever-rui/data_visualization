@@ -23,22 +23,11 @@ public class DataRecordDAO extends DAOSupport {
     private SessionFactory sessionFactory;
 
     /**
-     * 根据uid查询记录，时间逆序排列
+     * 根据id查询记录，时间倒序排列
      * @param id
+     * @param page
      * @return
      */
-    public List<data_record> getRecordByUid(Integer id) {
-        logger.info("进入getRecordByUid函数"+" 参数:"+" id-"+id);
-
-        String tableName="data_record";
-        String sort="create_time";
-        String uid="uid";
-        String hql = " FROM " +tableName + " WHERE " + uid + " = :uid" + " ORDER BY "+sort+" DESC";
-        Query query = sessionFactory.getCurrentSession().createQuery(hql);
-        query.setInteger("uid",id);
-        return query.list();
-    }
-
     public List<data_record> getAllRecordByUid(Integer id,final Page page) {
         logger.info("进入getAllRecordByUid函数"+" 参数:"+" id-"+id+" page:"+ page);
 
@@ -55,6 +44,11 @@ public class DataRecordDAO extends DAOSupport {
         return query.list();
     }
 
+    /**
+     * 根据id获取所有记录
+     * @param id
+     * @return
+     */
     public Integer getRecordSize(Integer id) {
         logger.info("进入getRecordSize函数"+" 参数:"+" id-"+id);
 
@@ -63,6 +57,49 @@ public class DataRecordDAO extends DAOSupport {
         String hql = " FROM " +tableName + " WHERE " + uid + " = :uid";
         Query query = sessionFactory.getCurrentSession().createQuery(hql);//执行查询操作
         query.setInteger("uid",id);
+        return query.list().size();
+    }
+
+    /**
+     * 根据id,关键字模糊查询
+     * @param id
+     * @param key
+     * @param page
+     * @return
+     */
+    public List<data_record> getRecordByDataName(Integer id,String key,final Page page) {
+        logger.info("进入getRecordByDataName函数"+" 参数:"+" id-"+id+" key:"+ key+" page:"+ page);
+
+        String tableName="data_record";
+        String sort="create_time";
+        String uid="uid";
+        String dataName="data_name";
+        String hql = " FROM " +tableName + " WHERE " + uid + " = :uid" +" AND "+ dataName+" LIKE :dataName"+ " ORDER BY "+sort+" DESC";
+        Query query = sessionFactory.getCurrentSession().createQuery(hql);//执行查询操作
+        query.setInteger("uid",id);
+        query.setString("dataName","%"+key+"%");
+        //设置每页显示多少个，设置多大结果。
+        query.setMaxResults(page.getEveryPage());
+        //设置起点
+        query.setFirstResult(page.getBeginIndex());
+        return query.list();
+    }
+
+    /**
+     * 根据id,key获取所有记录
+     * @param id
+     * @return
+     */
+    public Integer getRecordSizeByKey(Integer id,String key) {
+        logger.info("进入getRecordSizeByKey函数"+" 参数:"+" id-"+id+" key:"+ key);
+
+        String tableName="data_record";
+        String uid="uid";
+        String dataName="data_name";
+        String hql = " FROM " +tableName + " WHERE " + uid + " = :uid" +" AND "+ dataName+" LIKE :dataName";
+        Query query = sessionFactory.getCurrentSession().createQuery(hql);//执行查询操作
+        query.setInteger("uid",id);
+        query.setString("dataName","%"+key+"%");
         return query.list().size();
     }
 }
