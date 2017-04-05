@@ -29,29 +29,14 @@ $('#fileSubmit').click(function () {
 });
 
 
-
-function modifyChart(chartData) {
-
-    var jsonData = JSON.parse(chartData);
-    var chartTitle = jsonData.title;
-    var len = jsonData.data.length;
-
-    var names = [];    //类别数组（实际用来盛放X轴坐标值）
-
-    for (var i = 0; i < len; i++) {
-        names.push(jsonData.data[i].name);    //挨个取出类别并填入类别数组
-    }
-}
-
-
 //折线图堆叠
 
 	
 	var myChart = echarts.init(document.getElementById("Stack"));
 
-    option = {
+    option1 = {
         title: {
-            text: '测试',
+            text: '折线图'
         },
         tooltip: {
             trigger: 'axis'
@@ -97,7 +82,7 @@ function modifyChart(chartData) {
             }]
     };
 
-myChart.setOption(option);
+myChart.setOption(option1);
 
 
 
@@ -106,7 +91,7 @@ myChart.setOption(option);
 	
 	var area = echarts.init(document.getElementById("area"));
 	
-	option = {
+	option2 = {
     title: {
         text: '堆叠区域图'
     },
@@ -131,13 +116,11 @@ myChart.setOption(option);
         bottom: '3%',
         containLabel: true
     },
-    xAxis : [
-        {
+    xAxis : {
             type : 'category',
             boundaryGap : false,
             data : ['周一','周二','周三','周四','周五','周六','周日']
-        }
-    ],
+    },
     yAxis : [
         {
             type : 'value'
@@ -184,24 +167,11 @@ myChart.setOption(option);
             // },
             areaStyle: {normal: {}},
             data:[820, 932, 901, 934, 1290, 1330, 1320]
-        },
-        {
-            name:'测试6',
-            type:'line',
-            stack: '总量',
-            areaStyle: {normal: {}},
-            data:[320, 332, 301, 334, 390, 330, 320]
-        },{
-            name:'测试7',
-            type:'line',
-            stack: '总量',
-            areaStyle: {normal: {}},
-            data:[320, 332, 301, 334, 390, 330, 320]
-        },
+        }
     ]
 };
 
-area.setOption(option);
+area.setOption(option2);
 
 
 
@@ -210,7 +180,7 @@ area.setOption(option);
 	
 	var step = echarts.init(document.getElementById("step"));
 	
-	option = {
+	option3 = {
     title: {
         text: 'Step Line'
     },
@@ -246,28 +216,25 @@ area.setOption(option);
         {
             name:'Step Start',
             type:'line',
-            // step: 'start',
-            step:'true',
+            step: 'start',
             data:[120, 132, 101, 134, 90, 230, 210]
         },
         {
             name:'Step Middle',
             type:'line',
-            // step: 'middle',
-            step:'true',
+            step: 'middle',
             data:[220, 282, 201, 234, 290, 430, 410]
         },
         {
             name:'Step End',
             type:'line',
-            // step: 'end',
-            step:'true',
+            step: 'end',
             data:[450, 432, 401, 454, 590, 530, 510]
         }
     ]
 };
 
-step.setOption(option);
+step.setOption(option3);
 
 
 
@@ -287,7 +254,7 @@ for (var i = 1; i < 20000; i++) {
     data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
 }
 
-option = {
+option4 = {
     tooltip: {
         trigger: 'axis',
         position: function (pt) {
@@ -365,7 +332,7 @@ option = {
     ]
 };
 	
-	shuju.setOption(option);
+	shuju.setOption(option4);
 
 
 
@@ -395,7 +362,7 @@ for (var i = 0; i < 1000; i++) {
     data.push(randomData());
 }
 
-option = {
+option5 = {
     title: {
         text: '动态数据 + 时间坐标轴'
     },
@@ -451,6 +418,128 @@ option = {
 	    });
 	}, 1000);
 
-trends.setOption(option);
+trends.setOption(option5);
+
+
+
+
+
+
+
+//动态修改
+function modifyChart(chartData) {
+
+    var jsonData = JSON.parse(chartData);
+    var lenx = jsonData.xAxis.length;
+    var len = jsonData.data.length;
+
+    var namesx = [];    //类别数组（实际用来盛放X轴坐标值）
+    var names = [];     //存放数据系列名称
+
+    for (var i = 0; i < lenx; i++) {
+        namesx.push(jsonData.xAxis[i].name);    //挨个取出类别并填入类别数组
+    }
+
+    {
+        //图1，堆叠、平铺
+        var Item = function () {
+            return {
+                name: '',
+                type: 'line',
+                step: '',
+                smooth: 'false',
+                data: []
+            }
+        };
+
+        var mySeries = [];
+
+        for (var i = 0; i < len; i++) {
+            names.push(jsonData.data[i].name);    //挨个取出类别并填入
+            var it = new Item();
+            it.name = jsonData.data[i].name;
+            it.smooth = jsonData.data[i].smooth;
+            it.data = jsonData.data[i].value
+            mySeries.push(it);
+        }
+        option1.title.text=jsonData.title;
+        option1.series = mySeries;
+
+        option1.legend.data = names;
+        option1.xAxis.data = namesx;
+
+
+        myChart.setOption(option1);
+    }
+
+
+    {
+        //图2、堆叠面积图
+        var Item = function () {
+            return {
+                name: '',
+                type: 'line',
+                step: '',
+                smooth: '',
+                stack: '总量',
+                areaStyle: {normal: {}},
+                data: []
+            }
+        };
+
+        var mySeries = [];
+
+        for (var i = 0; i < len; i++) {
+            names.push(jsonData.data[i].name);    //挨个取出类别并填入
+            var it = new Item();
+            it.name = jsonData.data[i].name;
+            it.smooth = jsonData.data[i].smooth;
+            it.data = jsonData.data[i].value;
+            mySeries.push(it);
+        }
+
+        option2.series = mySeries;
+        option2.title.text=jsonData.title;
+        option2.legend.data = names;
+        option2.xAxis.data=namesx;
+
+
+        area.setOption(option2);
+
+    }
+
+    {
+        //图三、step line
+        var Item = function () {
+            return {
+                name: '',
+                type: 'line',
+                step: 'true',
+                smooth: '',
+                data: []
+            }
+        };
+
+        var mySeries = [];
+
+        for (var i = 0; i < len; i++) {
+            names.push(jsonData.data[i].name);    //挨个取出类别并填入
+            var it = new Item();
+            it.name = jsonData.data[i].name;
+            it.smooth = jsonData.data[i].smooth;
+            it.data = jsonData.data[i].value;
+            it.step=jsonData.data[i].step;
+            mySeries.push(it);
+        }
+
+        option3.series = mySeries;
+        option3.title.text=jsonData.title;
+        option3.legend.data = names;
+        option3.xAxis.data = namesx;
+
+
+        step.setOption(option3);
+    }
+}
 
 

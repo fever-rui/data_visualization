@@ -213,12 +213,6 @@
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/app.js" ></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/echarts.js" ></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/lineChart.js" ></script>
-<script>
-
-
-
-
-</script>
 
 </body>
 

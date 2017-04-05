@@ -46,21 +46,6 @@
                     <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span>柱状图</div>
                     <p class="page-header-description">图表组件使用的是 <a href="http://echarts.baidu.com">百度图表echarts</a></p>
                 </div>
-                <%--<form  class="am-u-sm-12 am-u-md-3" id="fileForm" action="<%=request.getContextPath()%>/record/columnar_fileLoad" method="post" enctype="multipart/form-data">--%>
-                    <%--<div class="am-form-group am-form-file">--%>
-                        <%--<button type="button" class="am-btn am-btn-danger am-btn-sm">--%>
-                            <%--<i class="am-icon-cloud-upload"></i> 添加文件</button>--%>
-                        <%--<input id="doc-form-file" type="file" name="file">--%>
-                    <%--</div>--%>
-                    <%--<div id="file-list"></div>--%>
-                    <%--<button class="am-btn am-btn-default am-btn-sm" type="submit">提交</button>--%>
-                    <%--<!-- 显示excel上传结果返回显示 -->--%>
-                    <%--<div id="excel-return">--%>
-
-                    <%--</div>--%>
-                <%--</form>--%>
-
-
 
                 <form  class="am-u-sm-12 am-u-md-3" id="fileForm" id="fileForm"  method="post" enctype="multipart/form-data">
                     <div class="am-form-group am-form-file">
@@ -68,13 +53,25 @@
                             <i class="am-icon-cloud-upload"></i> 添加文件</button>
                         <input id="doc-form-file" type="file" name="file">
                     </div>
-                    <div id="file-list"></div>
+                    <div id="file-list">
+                    </div>
                     <button class="am-btn am-btn-default am-btn-sm" id="fileSubmit" type="button">提交</button>
                     <!-- 显示excel上传结果返回显示 -->
                     <div id="excel-return">
 
                     </div>
                 </form>
+
+                <form  method="post" action="/record/columnar_fileDownLoad">
+                    <button class="am-btn am-btn-primary   am-btn-sm" style="margin-left: 10px" type="submit" >
+                        下载数据模板
+                        <i class="am-icon-cloud-download"></i>
+                    </button>
+                </form>
+
+                <div style="margin-left: 10px">
+                    <p class="page-header-description">注:txt文件应保存成UTF-8。</p>
+                </div>
 
 
             </div>

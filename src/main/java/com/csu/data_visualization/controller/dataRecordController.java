@@ -74,6 +74,18 @@ public class dataRecordController {
     }
 
     /**
+     * 柱状图数据模板
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/columnar_fileDownLoad")
+    public void columnar_fileDownLoad(HttpServletRequest request, HttpServletResponse response) {
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入columnar_fileDownLoad函数");
+        fileUtil.columnarWriteToTxt(response);
+    }
+
+    /**
      * 折线图数据导入
      * @param file
      * @return
