@@ -59,11 +59,12 @@ public class dataRecordController {
     }
 
     /**
+     * 柱状图数据导入
      * @param file
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/columnar_fileLoad", method = RequestMethod.POST)
+    @RequestMapping(value = "/columnar_fileLoad", method = RequestMethod.POST,produces = "text/html;charset=UTF-8")
     public String columnar_fileLoad(HttpServletRequest request,@RequestParam("file") MultipartFile file) {
 
         logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
@@ -78,13 +79,36 @@ public class dataRecordController {
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/line_fileLoad", method = RequestMethod.POST)
+    @RequestMapping(value = "/line_fileLoad", method = RequestMethod.POST,produces = "text/html;charset=UTF-8")
     public String line_fileLoad(HttpServletRequest request,@RequestParam("file") MultipartFile file) {
 
         logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
                 +" 进入line_fileLoad函数"+" 参数："+" file:"+file.getOriginalFilename());
 
-        return fileUtil.Analyze(file);
+        if(!fileUtil.isTxt(file.getOriginalFilename())) {
+            return "false";
+        }else {
+            String result= fileUtil.Analyze(file);
+            try {
+                URLEncoder.encode(result,"UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                logger.error(e);
+            }
+            addRecord(request,file.getOriginalFilename(),"折线图",result);
+            return result;
+        }
+    }
+
+    /**
+     * 折线图数据模板
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/line_fileDownLoad")
+    public void line_fileDownLoad(HttpServletRequest request, HttpServletResponse response) {
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入line_fileDownLoad函数");
+        fileUtil.lineWriteToTxt(response);
     }
 
     /**
@@ -121,6 +145,6 @@ public class dataRecordController {
     public void pie_fileDownLoad(HttpServletRequest request, HttpServletResponse response) {
         logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
                 +" 进入pie_fileDownLoad函数");
-        fileUtil.writeToTxt(response);
+        fileUtil.pieWriteToTxt(response);
     }
 }

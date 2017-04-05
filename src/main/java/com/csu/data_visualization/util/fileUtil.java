@@ -52,15 +52,15 @@ public class fileUtil {
     }
 
     /**
-     * 下载demo文件
+     * 下载扇形demo文件
      * @param response
      */
-    public static void writeToTxt(HttpServletResponse response) {
-        logger.info("writeToTxt函数");
+    public static void pieWriteToTxt(HttpServletResponse response) {
+        logger.info("pieWriteToTxt函数");
 
         response.setContentType("text/plain");
         response.addHeader("Content-Disposition",
-                "attachment;filename=demo.txt");// filename指定默认的名字
+                "attachment;filename=扇形demo.txt");// filename指定默认的名字
         BufferedOutputStream buff = null;
         StringBuffer write = new StringBuffer();
 
@@ -105,5 +105,18 @@ public class fileUtil {
                 e.printStackTrace();
             }
         }
+    }
+
+    /**
+     * 下载折线demo文件
+     * @param response
+     */
+    public static void lineWriteToTxt(HttpServletResponse response) {
+        logger.info("lineWriteToTxt函数");
+
+        response.setContentType("text/plain");
+        response.addHeader("Content-Disposition",
+                "attachment;filename=折线demo.txt");// filename指定默认的名字
+
     }
 }

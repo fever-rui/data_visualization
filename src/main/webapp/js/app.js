@@ -363,3 +363,20 @@ $('.sidebar-nav-sub-title').on('click', function() {
         .end()
         .find('.sidebar-nav-sub-ico').toggleClass('sidebar-nav-sub-ico-rotate');
 })
+
+
+// 显示文件名
+$('#doc-form-file').on('change', function() {
+    var fileNames = '';
+    $.each(this.files, function() {
+        fileNames += '<span class="am-badge">' + this.name + '</span> ';
+    });
+    $('#file-list').html(fileNames);
+});
+
+//消除文件名
+function removeFile() {
+    $('#doc-form-file').val("");
+    var span=$('#file-list>span');
+    span.remove();
+};

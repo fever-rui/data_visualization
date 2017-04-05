@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,19 +50,32 @@
                     <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span>折线图</div>
                     <p class="page-header-description">图表组件使用的是 <a href="http://echarts.baidu.com">百度图表echarts</a></p>
                 </div>
-                <form  class="am-u-sm-12 am-u-md-3" id="fileForm" action="<%=request.getContextPath()%>/record/line_fileLoad" method="post" enctype="multipart/form-data">
+                <form  class="am-u-sm-12 am-u-md-3" id="fileForm" id="fileForm"  method="post" enctype="multipart/form-data">
                     <div class="am-form-group am-form-file">
                         <button type="button" class="am-btn am-btn-danger am-btn-sm">
                             <i class="am-icon-cloud-upload"></i> 添加文件</button>
                         <input id="doc-form-file" type="file" name="file">
                     </div>
-                    <div id="file-list"></div>
-                    <button class="am-btn am-btn-default am-btn-sm" type="submit">提交</button>
+                    <div id="file-list">
+                    </div>
+                    <button class="am-btn am-btn-default am-btn-sm" id="fileSubmit" type="button">提交</button>
                     <!-- 显示excel上传结果返回显示 -->
                     <div id="excel-return">
 
                     </div>
                 </form>
+
+                <form  method="post" action="/record/line_fileDownLoad">
+                    <button class="am-btn am-btn-primary   am-btn-sm" style="margin-left: 10px" type="submit" >
+                        下载数据模板
+                        <i class="am-icon-cloud-download"></i>
+                    </button>
+                </form>
+
+                <div style="margin-left: 10px">
+                    <p class="page-header-description">注:txt文件应保存成UTF-8。</p>
+                </div>
+
             </div>
 
         </div>
@@ -130,6 +144,61 @@
     </div>
 
 
+        <div class="am-modal am-modal-alert" tabindex="-1" id="alertSelectFile">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">请先选择文件</div>
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn">确定</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="am-modal am-modal-no-btn" tabindex="-1" id="success-model">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">Success
+                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+                </div>
+                <div class="am-modal-bd">
+                    文件导入成功
+                </div>
+            </div>
+        </div>
+
+
+        <div class="am-modal am-modal-no-btn" tabindex="-1" id="typeFalse-model">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">Failure
+                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+                </div>
+                <div class="am-modal-hd">
+                    文件类型错误,请选择txt文件
+                </div>
+            </div>
+        </div>
+
+        <div class="am-modal am-modal-no-btn" tabindex="-1" id="failure-model">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">Failure
+                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+                </div>
+                <div class="am-modal-hd">
+                    文件导入失败
+                </div>
+            </div>
+        </div>
+
+        <div class="am-modal am-modal-no-btn" tabindex="-1" id="downloadFailure-model">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">Failure
+                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+                </div>
+                <div class="am-modal-hd">
+                    数据模板下载失败
+                </div>
+            </div>
+        </div>
+
+
 </div>
 
 <%@ include file="go_top.jsp" %>
@@ -145,26 +214,10 @@
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/echarts.js" ></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/lineChart.js" ></script>
 <script>
-    // 显示文件名
-    $(function() {
-        $('#doc-form-file').on('change', function() {
-            var fileNames = '';
-            $.each(this.files, function() {
-                fileNames += '<span class="am-badge">' + this.name + '</span> ';
-            });
-            $('#file-list').html(fileNames);
-        });
-    });
 
-    var $formSubmit = $("#fileForm button[type=submit]"); //导入文件的submit
 
-    //未导入文件时return
-    $formSubmit.on("click",function(check){
-        if($("#doc-form-file").val() == "") {
-            check.preventDefault();//此处阻止提交表单
-            alert("请先选择文件");
-        }
-    });
+
+
 </script>
 
 </body>

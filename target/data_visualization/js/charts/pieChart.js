@@ -288,23 +288,6 @@ option = {
 pie4.setOption(option);
 
 
-// 显示文件名
-$('#doc-form-file').on('change', function() {
-    var fileNames = '';
-    $.each(this.files, function() {
-        fileNames += '<span class="am-badge">' + this.name + '</span> ';
-    });
-    $('#file-list').html(fileNames);
-});
-
-//消除文件名
-function removeFile() {
-    $('#doc-form-file').val("");
-    var span=$('#file-list>span');
-    span.remove();
-};
-
-
 $('#fileSubmit').click(function () {
     if($("#doc-form-file").val() == "") {
         $('#alertSelectFile').modal();

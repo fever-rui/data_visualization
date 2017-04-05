@@ -1,78 +1,108 @@
 /*----------------------折线图-----------------------*/
+//表单提交
+$('#fileSubmit').click(function () {
+    if($("#doc-form-file").val() == "") {
+        $('#alertSelectFile').modal();
+    }else {
+        var form = new FormData(document.getElementById("fileForm"));
+        $.ajax({
+            url:"/record/line_fileLoad",
+            type:"post",
+            data:form,
+            processData:false,
+            contentType:false,
+            success:function(data){
+                if(data==='false') {
+                    $('#typeFalse-model').modal();
+                }else {
+                    removeFile();
+                    $('#success-model').modal();
+                    modifyChart(data);
+                }
+            },
+            error:function(){
+                $('#failure-model').modal();
+            }
+        });
+    }
+
+});
+
+
+
+function modifyChart(chartData) {
+
+    var jsonData = JSON.parse(chartData);
+    var chartTitle = jsonData.title;
+    var len = jsonData.data.length;
+
+    var names = [];    //类别数组（实际用来盛放X轴坐标值）
+
+    for (var i = 0; i < len; i++) {
+        names.push(jsonData.data[i].name);    //挨个取出类别并填入类别数组
+    }
+}
+
+
 //折线图堆叠
-(function(){
+
 	
 	var myChart = echarts.init(document.getElementById("Stack"));
-	
-	option = {
-    title: {
-        text: '折线图堆叠'
-    },
-    tooltip: {
-        trigger: 'axis'
-    },
-    legend: {
-        data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
-    },
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-    },
-    toolbox: {
-        feature: {
-            saveAsImage: {}
-        }
-    },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: ['周一','周二','周三','周四','周五','周六','周日']
-    },
-    yAxis: {
-        type: 'value'
-    },
-    series: [
-        {
-            name:'邮件营销',
-            type:'line',
-            stack: '总量',
-            data:[120, 132, 101, 134, 90, 230, 210]
+
+    option = {
+        title: {
+            text: '测试',
         },
-        {
-            name:'联盟广告',
-            type:'line',
-            stack: '总量',
-            data:[220, 182, 191, 234, 290, 330, 310]
+        tooltip: {
+            trigger: 'axis'
         },
-        {
-            name:'视频广告',
-            type:'line',
-            stack: '总量',
-            data:[150, 232, 201, 154, 190, 330, 410]
+        legend: {
+            data:['测试1','测试2','测试3']
         },
-        {
-            name:'直接访问',
-            type:'line',
-            stack: '总量',
-            data:[320, 332, 301, 334, 390, 330, 320]
+        toolbox: {
+            show: true,
+            feature: {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                restore : {show: true},
+                magicType: {show: true, type: ['stack', 'tiled']},
+                saveAsImage: {show: true}
+            }
         },
-        {
-            name:'搜索引擎',
-            type:'line',
-            stack: '总量',
-            data:[820, 932, 901, 934, 1290, 1330, 1320]
-        }
-    ]
-};
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['周一','周二','周三','周四','周五','周六','周日']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            name: '测试1',
+            type: 'line',
+            smooth: true,
+            data: [10, 12, 21, 54, 260, 830, 710]
+        },
+            {
+                name: '测试2',
+                type: 'line',
+                smooth: true,
+                data: [30, 182, 434, 791, 390, 30, 10]
+            },
+            {
+                name: '测试3',
+                type: 'line',
+                smooth: true,
+                data: [1320, 1132, 601, 234, 120, 90, 20]
+            }]
+    };
 
 myChart.setOption(option);
-})();
+
 
 
 //堆叠区域图
-(function(){
+
 	
 	var area = echarts.init(document.getElementById("area"));
 	
@@ -84,11 +114,15 @@ myChart.setOption(option);
         trigger: 'axis'
     },
     legend: {
-        data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+        data:['测试1','测试2','测试3','测试4','测试5','测试6','测试7']
     },
     toolbox: {
+        show: true,
         feature: {
-            saveAsImage: {}
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            restore : {show: true},
+            saveAsImage: {show: true}
         }
     },
     grid: {
@@ -111,55 +145,68 @@ myChart.setOption(option);
     ],
     series : [
         {
-            name:'邮件营销',
+            name:'测试1',
             type:'line',
             stack: '总量',
             areaStyle: {normal: {}},
             data:[120, 132, 101, 134, 90, 230, 210]
         },
         {
-            name:'联盟广告',
+            name:'测试2',
             type:'line',
             stack: '总量',
             areaStyle: {normal: {}},
             data:[220, 182, 191, 234, 290, 330, 310]
         },
         {
-            name:'视频广告',
+            name:'测试3',
             type:'line',
             stack: '总量',
             areaStyle: {normal: {}},
             data:[150, 232, 201, 154, 190, 330, 410]
         },
         {
-            name:'直接访问',
+            name:'测试4',
             type:'line',
             stack: '总量',
             areaStyle: {normal: {}},
             data:[320, 332, 301, 334, 390, 330, 320]
         },
         {
-            name:'搜索引擎',
+            name:'测试5',
             type:'line',
             stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'top'
-                }
-            },
+            // label: {
+            //     normal: {
+            //         show: true,
+            //         position: 'top'
+            //     }
+            // },
             areaStyle: {normal: {}},
             data:[820, 932, 901, 934, 1290, 1330, 1320]
-        }
+        },
+        {
+            name:'测试6',
+            type:'line',
+            stack: '总量',
+            areaStyle: {normal: {}},
+            data:[320, 332, 301, 334, 390, 330, 320]
+        },{
+            name:'测试7',
+            type:'line',
+            stack: '总量',
+            areaStyle: {normal: {}},
+            data:[320, 332, 301, 334, 390, 330, 320]
+        },
     ]
 };
 
 area.setOption(option);
-})();
+
 
 
 //对数轴
-(function(){
+
 	
 	var step = echarts.init(document.getElementById("step"));
 	
@@ -180,8 +227,12 @@ area.setOption(option);
         containLabel: true
     },
     toolbox: {
+        show: true,
         feature: {
-            saveAsImage: {}
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            restore : {show: true},
+            saveAsImage: {show: true}
         }
     },
     xAxis: {
@@ -195,30 +246,33 @@ area.setOption(option);
         {
             name:'Step Start',
             type:'line',
-            step: 'start',
+            // step: 'start',
+            step:'true',
             data:[120, 132, 101, 134, 90, 230, 210]
         },
         {
             name:'Step Middle',
             type:'line',
-            step: 'middle',
+            // step: 'middle',
+            step:'true',
             data:[220, 282, 201, 234, 290, 430, 410]
         },
         {
             name:'Step End',
             type:'line',
-            step: 'end',
+            // step: 'end',
+            step:'true',
             data:[450, 432, 401, 454, 590, 530, 510]
         }
     ]
 };
 
 step.setOption(option);
-})();
+
 
 
 //大数据量面积图
-(function(){
+
 	var shuju = echarts.init(document.getElementById("shuju"));
 	
 	var base = +new Date(1968, 9, 3);
@@ -312,12 +366,12 @@ option = {
 };
 	
 	shuju.setOption(option);
-})();
+
 
 
 
 //动态数据+时间坐标轴
-(function(){
+
 	
 	var trends = echarts.init(document.getElementById("trends"));
 	
@@ -398,287 +452,5 @@ option = {
 	}, 1000);
 
 trends.setOption(option);
-})();
 
 
-
-
-/*----------------------柱状图-----------------------*/
-//坐标轴刻度与标签对齐
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-////柱状图
-//(function(){
-//	
-//var myChart = echarts.init(document.getElementById("histogram"));
-//
-//option = {
-//	
-//	title: {
-//		text: "柱状图",
-//		x:'center'
-//	},
-//	
-//  color: ['#3398DB'],
-//  tooltip : {
-//      trigger: 'axis',
-//      axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-//          type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-//      }
-//  },
-//  toolbox: {
-//      feature: {
-//          saveAsImage: {}
-//      }
-//  },
-//  grid: {
-//      left: '3%',
-//      right: '4%',
-//      bottom: '3%',
-//      containLabel: true
-//  },
-//  xAxis : [
-//      {
-//          type : 'category',
-//          data : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-//          axisTick: {
-//              alignWithLabel: true
-//          }
-//      }
-//  ],
-//  yAxis : [
-//      {
-//          type : 'value'
-//      }
-//  ],
-//  series : [
-//      {
-//          name:'直接访问',
-//          type:'bar',
-//          barWidth: '60%',
-//          data:[10, 52, 200, 334, 390, 330, 220]
-//      }
-//  ]
-//};
-//
-//myChart.setOption(option);
-//})();
-//
-//
-////折线图
-//(function(){
-//	
-//	var line = echarts.init(document.getElementById("line"));
-//	
-//	option = {
-//  title: {
-//      text: '堆叠区域图',
-//      x:'center'
-//  },
-//  tooltip : {
-//      trigger: 'axis'
-//  },
-//  
-//  toolbox: {
-//      feature: {
-//          saveAsImage: {}
-//      }
-//  },
-//  grid: {
-//      left: '3%',
-//      right: '4%',
-//      bottom: '3%',
-//      containLabel: true
-//  },
-//  xAxis : [
-//      {
-//          type : 'category',
-//          boundaryGap : false,
-//          data : ['周一','周二','周三','周四','周五','周六','周日']
-//      }
-//  ],
-//  yAxis : [
-//      {
-//          type : 'value'
-//      }
-//  ],
-//  series : [
-//      
-//      {
-//          name:'联盟广告',
-//          type:'line',
-//          stack: '总量',
-//          areaStyle: {normal: {}},
-//          data:[220, 182, 191, 234, 290, 330, 310]
-//      },
-//      {
-//          name:'视频广告',
-//          type:'line',
-//          stack: '总量',
-//          areaStyle: {normal: {}},
-//          data:[150, 232, 201, 154, 190, 330, 410]
-//      },
-//      {
-//          name:'直接访问',
-//          type:'line',
-//          stack: '总量',
-//          areaStyle: {normal: {}},
-//          data:[320, 332, 301, 334, 390, 330, 320]
-//      },
-//      {
-//          name:'搜索引擎',
-//          type:'line',
-//          stack: '总量',
-//          label: {
-//              normal: {
-//                  show: true,
-//                  position: 'top'
-//              }
-//          },
-//          areaStyle: {normal: {}},
-//          data:[820, 932, 901, 934, 1290, 1330, 1320]
-//      }
-//  ]
-//};
-//
-//line.setOption(option);
-//})();
-//
-//
-////饼状图
-//(function(){
-//
-//	var pie = echarts.init(document.getElementById("pie"));
-//	
-//	option = {
-//  title : {
-//      text: '饼状图',
-//      subtext: '纯属虚构',
-//      x:'center'
-//  },
-//  tooltip : {
-//      trigger: 'item',
-//      formatter: "{a} <br/>{b} : {c} ({d}%)"
-//  },
-//  toolbox: {
-//      feature: {
-//          saveAsImage: {}
-//      }
-//  },
-//  legend: {
-//      orient: 'vertical',
-//      left: 'left',
-//      data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
-//  },
-//  series : [
-//      {
-//          name: '访问来源',
-//          type: 'pie',
-//          radius : '55%',
-//          center: ['50%', '60%'],
-//          data:[
-//              {value:335, name:'直接访问'},
-//              {value:310, name:'邮件营销'},
-//              {value:234, name:'联盟广告'},
-//              {value:135, name:'视频广告'},
-//              {value:1548, name:'搜索引擎'}
-//          ],
-//          itemStyle: {
-//              emphasis: {
-//                  shadowBlur: 10,
-//                  shadowOffsetX: 0,
-//                  shadowColor: 'rgba(0, 0, 0, 0.5)'
-//              }
-//          }
-//      }
-//  ]
-//};
-//
-//
-//pie.setOption(option);
-//})();
-//
-//
-////环形图
-//(function(){
-//	
-//	var annular = echarts.init(document.getElementById("annular"));
-//	
-//
-//	option = {
-//		
-//		title: {
-//			text: "环状图",
-//			x:'center'
-//		},
-//		
-//	    tooltip: {
-//	        trigger: 'item',
-//	        formatter: "{a} <br/>{b}: {c} ({d}%)"
-//	    },
-//	    toolbox: {
-//	        feature: {
-//	            saveAsImage: {}
-//	        }
-//	    },
-//	    legend: {
-//	        orient: 'vertical',
-//	        x: 'left',
-//	        data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
-//	    },
-//	    series: [
-//	        {
-//	            name:'访问来源',
-//	            type:'pie',
-//	            radius: ['50%', '70%'],
-//	            avoidLabelOverlap: false,
-//	            label: {
-//	                normal: {
-//	                    show: false,
-//	                    position: 'center'
-//	                },
-//	                emphasis: {
-//	                    show: true,
-//	                    textStyle: {
-//	                        fontSize: '30',
-//	                        fontWeight: 'bold'
-//	                    }
-//	                }
-//	            },
-//	            labelLine: {
-//	                normal: {
-//	                    show: false
-//	                }
-//	            },
-//	            data:[
-//	                {value:335, name:'直接访问'},
-//	                {value:310, name:'邮件营销'},
-//	                {value:234, name:'联盟广告'},
-//	                {value:135, name:'视频广告'},
-//	                {value:1548, name:'搜索引擎'}
-//	            ]
-//	        }
-//	    ]
-//	};
-//
-//annular.setOption(option);
-//})();
-//
