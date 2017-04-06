@@ -117,86 +117,34 @@
                 </div>
             </div>
 
-            <div class="widget am-cf">
-                <div class="widget-head am-cf">
-                    <div class="widget-title am-fl">大数据面积图</div>
-                    <div class="widget-function am-fr">
-                        <a href="javascript:;"></a>
-                    </div>
-                </div>
-                <div class="widget-body am-fr">
-                    <div  id="shuju" style="width: 100%;height: 400px;"></div>
-                </div>
-            </div>
+            <%--<div class="widget am-cf">--%>
+                <%--<div class="widget-head am-cf">--%>
+                    <%--<div class="widget-title am-fl">大数据面积图</div>--%>
+                    <%--<div class="widget-function am-fr">--%>
+                        <%--<a href="javascript:;"></a>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+                <%--<div class="widget-body am-fr">--%>
+                    <%--<div  id="shuju" style="width: 100%;height: 400px;"></div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
 
-            <div class="widget am-cf">
-                <div class="widget-head am-cf">
-                    <div class="widget-title am-fl">动态数据+时间坐标轴</div>
-                    <div class="widget-function am-fr">
-                        <a href="javascript:;"></a>
-                    </div>
-                </div>
-                <div class="widget-body am-fr">
-                    <div  id="trends" style="width: 100%;height: 400px;"></div>
-                </div>
-            </div>
+            <%--<div class="widget am-cf">--%>
+                <%--<div class="widget-head am-cf">--%>
+                    <%--<div class="widget-title am-fl">动态数据+时间坐标轴</div>--%>
+                    <%--<div class="widget-function am-fr">--%>
+                        <%--<a href="javascript:;"></a>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+                <%--<div class="widget-body am-fr">--%>
+                    <%--<div  id="trends" style="width: 100%;height: 400px;"></div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
         </div>
     </div>
 
 
-        <div class="am-modal am-modal-alert" tabindex="-1" id="alertSelectFile">
-            <div class="am-modal-dialog">
-                <div class="am-modal-hd">请先选择文件</div>
-                <div class="am-modal-footer">
-                    <span class="am-modal-btn">确定</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="am-modal am-modal-no-btn" tabindex="-1" id="success-model">
-            <div class="am-modal-dialog">
-                <div class="am-modal-hd">Success
-                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
-                </div>
-                <div class="am-modal-bd">
-                    文件导入成功
-                </div>
-            </div>
-        </div>
-
-
-        <div class="am-modal am-modal-no-btn" tabindex="-1" id="typeFalse-model">
-            <div class="am-modal-dialog">
-                <div class="am-modal-hd">Failure
-                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
-                </div>
-                <div class="am-modal-hd">
-                    文件类型错误,请选择txt文件
-                </div>
-            </div>
-        </div>
-
-        <div class="am-modal am-modal-no-btn" tabindex="-1" id="failure-model">
-            <div class="am-modal-dialog">
-                <div class="am-modal-hd">Failure
-                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
-                </div>
-                <div class="am-modal-hd">
-                    文件导入失败
-                </div>
-            </div>
-        </div>
-
-        <div class="am-modal am-modal-no-btn" tabindex="-1" id="downloadFailure-model">
-            <div class="am-modal-dialog">
-                <div class="am-modal-hd">Failure
-                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
-                </div>
-                <div class="am-modal-hd">
-                    数据模板下载失败
-                </div>
-            </div>
-        </div>
+        <%@ include file="load_alert.jsp" %>
 
 
 </div>
@@ -204,7 +152,7 @@
 <%@ include file="go_top.jsp" %>
 
 
-</div>
+
 
 <!-- navbar -->
 <a href="admin-offcanvas" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"><!--<i class="fa fa-bars" aria-hidden="true"></i>--></a>

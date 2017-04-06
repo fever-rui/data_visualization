@@ -70,7 +70,18 @@ public class dataRecordController {
         logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
                 +" 进入columnar_fileLoad函数"+" 参数："+" file:"+file.getOriginalFilename());
 
-        return fileUtil.Analyze(file);
+        if(!fileUtil.isTxt(file.getOriginalFilename())) {
+            return "false";
+        }else {
+            String result= fileUtil.Analyze(file);
+            try {
+                URLEncoder.encode(result,"UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                logger.error(e);
+            }
+            addRecord(request,file.getOriginalFilename(),"柱状图",result);
+            return result;
+        }
     }
 
     /**

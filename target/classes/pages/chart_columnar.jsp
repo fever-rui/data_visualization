@@ -129,13 +129,14 @@
         </div>
     </div>
 
+    <%@ include file="load_alert.jsp" %>
 
 </div>
 
 <%@ include file="go_top.jsp" %>
 
 
-</div>
+
 
 <!-- navbar -->
 <a href="admin-offcanvas" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"><!--<i class="fa fa-bars" aria-hidden="true"></i>--></a>
@@ -145,50 +146,7 @@
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/echarts.js" ></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/columnarChart.js" ></script>
 <script>
-    // 显示文件名
-    $(function() {
-        $('#doc-form-file').on('change', function() {
-            var fileNames = '';
-            $.each(this.files, function() {
-                fileNames += '<span class="am-badge">' + this.name + '</span> ';
-            });
-            $('#file-list').html(fileNames);
-        });
-    });
 
-    var $formSubmit = $("#fileForm button[type=submit]"); //导入文件的submit
-
-    //未导入文件时return
-    $formSubmit.on("click",function(check){
-        if($("#doc-form-file").val() == "") {
-            check.preventDefault();//此处阻止提交表单
-            alert("请先选择文件");
-        }
-    });
-    
-    $('#fileSubmit').click(function () {
-        if($("#doc-form-file").val() == "") {
-            check.preventDefault();//此处阻止提交表单
-            alert("请先选择文件");
-        }else {
-            $('#file-list').html('');
-            var form = new FormData(document.getElementById("fileForm"));
-            $.ajax({
-                url:"${pageContext.request.contextPath}/record/columnar_fileLoad",
-                type:"post",
-                data:form,
-                processData:false,
-                contentType:false,
-                success:function(data){
-                    console.log("over..");
-                },
-                error:function(e){
-                    alert("错误！！");
-                }
-            });
-        }
-
-    })
 </script>
 </body>
 

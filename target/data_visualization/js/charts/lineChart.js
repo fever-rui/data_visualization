@@ -29,7 +29,7 @@ $('#fileSubmit').click(function () {
 });
 
 
-//折线图堆叠
+//折线图堆叠\平铺
 
 	
 	var myChart = echarts.init(document.getElementById("Stack"));
@@ -430,15 +430,12 @@ trends.setOption(option5);
 function modifyChart(chartData) {
 
     var jsonData = JSON.parse(chartData);
-    var lenx = jsonData.xAxis.length;
     var len = jsonData.data.length;
 
     var namesx = [];    //类别数组（实际用来盛放X轴坐标值）
     var names = [];     //存放数据系列名称
 
-    for (var i = 0; i < lenx; i++) {
-        namesx.push(jsonData.xAxis[i].name);    //挨个取出类别并填入类别数组
-    }
+    namesx=jsonData.xAxis[0].name;
 
     {
         //图1，堆叠、平铺
@@ -469,7 +466,7 @@ function modifyChart(chartData) {
         option1.xAxis.data = namesx;
 
 
-        myChart.setOption(option1);
+        myChart.setOption(option1,true);
     }
 
 
@@ -504,7 +501,7 @@ function modifyChart(chartData) {
         option2.xAxis.data=namesx;
 
 
-        area.setOption(option2);
+        area.setOption(option2,true);
 
     }
 
@@ -538,7 +535,7 @@ function modifyChart(chartData) {
         option3.xAxis.data = namesx;
 
 
-        step.setOption(option3);
+        step.setOption(option3,true);
     }
 }
 

@@ -1,17 +1,15 @@
 /*----------------------柱状图-----------------------*/
 //坐标轴刻度与标签对齐
-(function(){
 
     var columnar1 = echarts.init(document.getElementById("columnar1"));
 
-    option = {
+    option1 = {
 
         title: {
             text: "柱状图",
             x:'left'
         },
 
-        color: ['#3398DB'],
         tooltip : {
             trigger: 'axis',
             axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -21,8 +19,14 @@
         toolbox: {
             show: true,
             feature: {
-                saveAsImage: {}
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                restore : {show: true},
+                saveAsImage: {show: true}
             }
+        },
+        legend: {
+            data: ['直接访问']
         },
         grid: {
             left: '3%',
@@ -48,23 +52,19 @@
             {
                 name:'直接访问',
                 type:'bar',
-                barWidth: '60%',
                 data:[10, 52, 200, 334, 390, 330, 220]
             }
         ]
     };
 
-    columnar1.setOption(option);
-})();
+    columnar1.setOption(option1);
 
 
 
 //堆叠条形图
-(function(){
-
     var columnar2 = echarts.init(document.getElementById("columnar2"));
 
-    option = {
+    option2 = {
 
         title : {
             text: "堆叠条形图",
@@ -80,12 +80,14 @@
         toolbox: {
             show: true,
             feature: {
-                saveAsImage: {}
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                restore : {show: true},
+                saveAsImage: {show: true}
             }
         },
         legend: {
             data: ['直接访问', '邮件营销','联盟广告','视频广告','搜索引擎'],
-            top:'30px'
         },
         grid: {
             left: '3%',
@@ -163,17 +165,14 @@
             }
         ]
     };
-
-    columnar2.setOption(option);
-})();
+    columnar2.setOption(option2);
 
 
 //正负条形图
-(function(){
 
     var columnar3 = echarts.init(document.getElementById("columnar3"));
 
-    option = {
+    option3 = {
 
         title : {
             text: "正负条形图",
@@ -189,12 +188,14 @@
         toolbox: {
             show: true,
             feature: {
-                saveAsImage: {}
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                restore : {show: true},
+                saveAsImage: {show: true}
             }
         },
         legend: {
             data:['利润', '支出', '收入'],
-            top:'30px'
         },
         grid: {
             left: '3%',
@@ -229,7 +230,6 @@
             {
                 name:'收入',
                 type:'bar',
-                stack: '总量',
                 label: {
                     normal: {
                         show: true
@@ -240,7 +240,6 @@
             {
                 name:'支出',
                 type:'bar',
-                stack: '总量',
                 label: {
                     normal: {
                         show: true,
@@ -251,15 +250,10 @@
             }
         ]
     };
-
-
-    columnar3.setOption(option);
-})();
+    columnar3.setOption(option3);
 
 
 //折柱混合
-(function(){
-
     var columnar4 = echarts.init(document.getElementById("columnar4"));
 
 
@@ -276,12 +270,14 @@
         toolbox: {
             show: true,
             feature: {
-                saveAsImage: {}
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                restore : {show: true},
+                saveAsImage: {show: true}
             }
         },
         legend: {
             data:['蒸发量','降水量','平均温度'],
-            top:'30px'
         },
         xAxis: [
             {
@@ -330,9 +326,148 @@
             }
         ]
     };
-
-
-
-
     columnar4.setOption(option);
-})();
+
+$('#fileSubmit').click(function () {
+    if($("#doc-form-file").val() == "") {
+        $('#alertSelectFile').modal();
+    }else {
+        var form = new FormData(document.getElementById("fileForm"));
+        $.ajax({
+            url:"/record/columnar_fileLoad",
+            type:"post",
+            data:form,
+            processData:false,
+            contentType:false,
+            success:function(data){
+                if(data==='false') {
+                    $('#typeFalse-model').modal();
+                }else {
+                    removeFile();
+                    $('#success-model').modal();
+                    modifyChart(data);
+                }
+            },
+            error:function(){
+                $('#failure-model').modal();
+            }
+        });
+    }
+
+});
+
+
+function modifyChart(chartData) {
+
+    var jsonData = JSON.parse(chartData);
+    var len = jsonData.data.length;
+
+    var namesx = [];    //类别数组（实际用来盛放X轴坐标值）
+    var names = [];     //存放数据系列名称
+
+    namesx=jsonData.axis[0].name;
+
+    {
+        //图1，柱形图
+        var Item = function () {
+            return {
+                name:'',
+                type:'bar',
+                data:[]
+            }
+        };
+
+        var mySeries = [];
+
+        for (var i = 0; i < len; i++) {
+            names.push(jsonData.data[i].name);    //挨个取出类别并填入
+            var it = new Item();
+            it.name = jsonData.data[i].name;
+            it.data = jsonData.data[i].value
+            mySeries.push(it);
+        }
+        option1.title.text=jsonData.title;
+        option1.series = mySeries;
+
+        option1.legend.data = names;
+        option1.xAxis.data = namesx;
+
+
+        columnar1.setOption(option1,true);
+
+    }
+
+
+    {
+        //图2，堆叠条形图
+        var Item = function () {
+            return {
+                name:'',
+                type:'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'insideRight'
+                    }
+                },
+                data:[]
+            }
+        };
+
+        var mySeries = [];
+
+        for (var i = 0; i < len; i++) {
+            names.push(jsonData.data[i].name);    //挨个取出类别并填入
+            var it = new Item();
+            it.name = jsonData.data[i].name;
+            it.data = jsonData.data[i].value
+            mySeries.push(it);
+        }
+        option2.title.text=jsonData.title;
+        option2.series = mySeries;
+
+        option2.legend.data = names;
+        option2.yAxis.data = namesx;
+
+
+        columnar2.setOption(option2,true);
+    }
+
+    {
+        //图3，正负条形图
+        var Item = function () {
+            return {
+                name:'',
+                type:'bar',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'inside'
+                    }
+                },
+                data:[]
+            }
+
+        };
+
+        var mySeries = [];
+
+        for (var i = 0; i < len; i++) {
+            names.push(jsonData.data[i].name);    //挨个取出类别并填入
+            var it = new Item();
+            it.name = jsonData.data[i].name;
+            it.data = jsonData.data[i].value
+            mySeries.push(it);
+        }
+        option3.title.text=jsonData.title;
+        option3.series =mySeries;
+
+        option3.legend.data = names;
+        option3.yAxis.data = namesx;
+
+
+        columnar3.setOption(option3,true);
+    }
+
+}

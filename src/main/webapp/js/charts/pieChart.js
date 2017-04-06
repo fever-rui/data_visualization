@@ -390,7 +390,7 @@ function modifyChart(chartData) {
         ]
     };
 
-    pie1.setOption(option);
+    pie1.setOption(option,true);
 
     // //设置嵌套环形图
     // option = {
@@ -499,7 +499,7 @@ function modifyChart(chartData) {
         ]
     };
 
-    pie3.setOption(option);
+    pie3.setOption(option,true);
 
 
     //南丁格尔玫瑰图
@@ -567,6 +567,6 @@ function modifyChart(chartData) {
         ]
     };
 
-    pie4.setOption(option);
+    pie4.setOption(option,true);
 }
 
