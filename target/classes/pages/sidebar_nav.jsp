@@ -16,12 +16,14 @@
             </a>
         </li>
         <li class="sidebar-nav-link">
-            <a href="javascript:;" class="sidebar-nav-sub-title active">
+            <a href="javascript:;" class="sidebar-nav-sub-title ">
+            <%--<a href="javascript:;" class="sidebar-nav-sub-title active">--%>
                 <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 图表
             </a>
             <ul class="sidebar-nav sidebar-nav-sub" style="display: block;">
                 <li class="sidebar-nav-link">
-                    <a href="chart_line" class="sub-active">
+                    <%--<a href="chart_line" class="sub-active">--%>
+                    <a href="chart_line" >
                         <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 折线图
                     </a>
                 </li>
@@ -36,6 +38,25 @@
                         <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 扇形图
                     </a>
                 </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="chart_scatterPlot">
+                        <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 散点图
+                    </a>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="chart_radar">
+                        <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 雷达图
+                    </a>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="chart_map">
+                        <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 地图
+                    </a>
+                </li>
+
             </ul>
         </li>
     </ul>

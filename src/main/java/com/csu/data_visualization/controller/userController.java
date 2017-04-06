@@ -197,6 +197,45 @@ public class userController {
     }
 
     /**
+     * 跳转至散点图
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/chart_scatterPlot")
+    public ModelAndView toScatterPlot(ModelAndView model,HttpServletRequest request) {
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+"用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入toScatterPlot函数 ");
+        model.setViewName("chart_scatterPlot");
+        return model;
+    }
+
+    /**
+     * 跳转至雷达图
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/chart_radar")
+    public ModelAndView toRadar(ModelAndView model,HttpServletRequest request) {
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+"用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入toRadar函数 ");
+        model.setViewName("chart_radar");
+        return model;
+    }
+
+    /**
+     * 跳转至地图
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/chart_map")
+    public ModelAndView toMap(ModelAndView model,HttpServletRequest request) {
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+"用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入toMap函数 ");
+        model.setViewName("chart_map");
+        return model;
+    }
+
+    /**
      * 登录
      * @param account
      * @param password
