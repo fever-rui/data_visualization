@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dbcb0cd-4542-4773-a519-de67fac5e9eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/pages/chart_map.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/pages/chart_radar.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/pages/chart_scatterPlot.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/mapChart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/radarChart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/scatterPlotChart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/controller/userController.class" afterPath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/controller/userController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/controller/userController.class" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/controller/userController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/userController.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/userController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/sidebar_nav.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/sidebar_nav.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/app.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/charts/columnarChart.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/columnarChart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/sidebar_nav.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/sidebar_nav.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/sidebar_nav.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/sidebar_nav.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/css/app.css" afterPath="$PROJECT_DIR$/target/data_visualization/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/js/charts/columnarChart.js" afterPath="$PROJECT_DIR$/target/data_visualization/js/charts/columnarChart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
     </list>
     <ignored path="data_visualization.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,56 +39,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="chart_radar.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_radar.jsp">
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chart_scatterPlot.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_scatterPlot.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="730" column="13" selection-start-line="730" selection-start-column="13" selection-end-line="730" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scatterPlotChart.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/scatterPlotChart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="236" column="26" selection-start-line="236" selection-start-column="26" selection-end-line="236" selection-end-column="26" />
-              <folding>
-                <marker date="1491503680817" expanded="true" signature="4563:4664" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="radarChart.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/radarChart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#40#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -134,7 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/assets/js/charts/pieChart.js" />
         <option value="$PROJECT_DIR$/src/main/resources/pages/test.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/fileAnalyze.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/getHost.java" />
@@ -185,6 +124,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/js/charts/radarChart.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/app.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/charts/scatterPlotChart.js" />
+        <option value="$PROJECT_DIR$/readme.txt" />
       </list>
     </option>
   </component>
@@ -1162,12 +1102,12 @@
       <workItem from="1491289277905" duration="32200000" />
       <workItem from="1491377242898" duration="28634000" />
       <workItem from="1491464123826" duration="12479000" />
-      <workItem from="1491490398997" duration="5772000" />
+      <workItem from="1491490398997" duration="6417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343919000" />
+    <option name="totallyTimeSpent" value="344564000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1179,8 +1119,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1197,7 +1137,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22087745" sideWeight="0.4816626" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22087745" sideWeight="0.4816626" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22087745" sideWeight="0.5183374" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1255,13 +1195,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/theme.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/amazeui.datatables.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-30">
@@ -1646,6 +1579,14 @@
           <folding>
             <marker date="1491503680817" expanded="true" signature="4563:4664" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
