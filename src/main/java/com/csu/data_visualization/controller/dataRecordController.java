@@ -135,7 +135,7 @@ public class dataRecordController {
     }
 
     /**
-     * 饼状图数据导入
+     * 扇形图数据导入
      * @param file
      * @return
      */
@@ -169,5 +169,42 @@ public class dataRecordController {
         logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
                 +" 进入pie_fileDownLoad函数");
         fileUtil.pieWriteToTxt(response);
+    }
+
+    /**
+     * 雷达图数据导入
+     * @param file
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/radar_fileLoad", method = RequestMethod.POST, produces = "text/html;charset=UTF-8")
+    public String radar_fileLoad(HttpServletRequest request,@RequestParam("file") MultipartFile file) {
+
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入radar_fileLoad函数"+" 参数："+" file:"+file.getOriginalFilename());
+        if(!fileUtil.isTxt(file.getOriginalFilename())) {
+            return "false";
+        }else {
+            String result= fileUtil.Analyze(file);
+            try {
+                URLEncoder.encode(result,"UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                logger.error(e);
+            }
+            addRecord(request,file.getOriginalFilename(),"雷达图",result);
+            return result;
+        }
+    }
+
+    /**
+     * 雷达图数据模板
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/radar_fileDownLoad")
+    public void radar_fileDownLoad(HttpServletRequest request, HttpServletResponse response) {
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入radar_fileDownLoad函数");
+        fileUtil.radarWriteToTxt(response);
     }
 }

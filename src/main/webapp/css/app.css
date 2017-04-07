@@ -1912,3 +1912,12 @@ ul.tpl-dropdown-content .tpl-dropdown-menu-messages-item .menu-messages-content 
     right: 0;
   }
 }
+
+/*回到顶部*/
+/*#top{*/
+  /*position: fixed;*/
+  /*bottom: 10px;*/
+  /*right: 10px;*/
+  /*visibility: hidden;*/
+/*}*/
+

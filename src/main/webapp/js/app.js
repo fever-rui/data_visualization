@@ -380,3 +380,16 @@ function removeFile() {
     var span=$('#file-list>span');
     span.remove();
 };
+
+// //回到顶部
+// var top = document.getElementById("top");
+// top.onscroll = function(){
+//     if(document.body.scrollTop>100){
+//         document.getElementById("top").style.visibility='visible';
+//     } else {
+//         document.getElementById("top").style.visibility='hidden';
+//     }
+// }
+// top.onclick = function(){
+//     window.scrollTo(0,0);
+// }

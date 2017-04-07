@@ -29,12 +29,12 @@
                 </li>
 
                 <li class="sidebar-nav-link">
-                    <a href="chart_columnar.">
+                    <a href="chart_columnar " >
                         <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 柱状图
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="chart_pie">
+                    <a href="chart_pie" >
                         <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 扇形图
                     </a>
                 </li>

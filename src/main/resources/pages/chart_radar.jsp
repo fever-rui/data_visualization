@@ -81,7 +81,7 @@
         <div class="row-content am-cf">
             <div class="widget am-cf">
                 <div class="widget-head am-cf">
-                    <div class="widget-title am-fl">雷达图</div>
+                    <div class="widget-title am-fl">多边形雷达图</div>
                     <div class="widget-function am-fr">
                         <a href="javascript:;"></a>
                     </div>
@@ -91,8 +91,47 @@
                 </div>
             </div>
 
+            <div class="widget am-cf">
+                <div class="widget-head am-cf">
+                    <div class="widget-title am-fl">多边形区域雷达图</div>
+                    <div class="widget-function am-fr">
+                        <a href="javascript:;"></a>
+                    </div>
+                </div>
+                <div class="widget-body am-fr">
+                    <div  id="radar2" style="width: 100%;height: 400px;"></div>
+                </div>
+            </div>
+
+            <div class="widget am-cf">
+                <div class="widget-head am-cf">
+                    <div class="widget-title am-fl">圆形雷达图</div>
+                    <div class="widget-function am-fr">
+                        <a href="javascript:;"></a>
+                    </div>
+                </div>
+                <div class="widget-body am-fr">
+                    <div  id="radar3" style="width: 100%;height: 400px;"></div>
+                </div>
+            </div>
+
+            <div class="widget am-cf">
+                <div class="widget-head am-cf">
+                    <div class="widget-title am-fl">圆形区域雷达图</div>
+                    <div class="widget-function am-fr">
+                        <a href="javascript:;"></a>
+                    </div>
+                </div>
+                <div class="widget-body am-fr">
+                    <div  id="radar4" style="width: 100%;height: 400px;"></div>
+                </div>
+            </div>
 
         </div>
+
+
+
+
     </div>
 
     <%@ include file="load_alert.jsp" %>
@@ -111,9 +150,6 @@
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/app.js" ></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/echarts.js" ></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/radarChart.js" ></script>
-<script>
-
-</script>
 </body>
 
 </html>
