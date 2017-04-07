@@ -313,8 +313,30 @@ public class fileUtil {
 
             //获取系统换行符换行
             write.append("{" + System.getProperty("line.separator"));
+            write.append("    \"title\": \"test\"," + System.getProperty("line.separator"));
+            write.append("    \"indicator\": [" + System.getProperty("line.separator"));
+            write.append("            { \"name\": \"测试1\", \"max\": 6500}," + System.getProperty("line.separator"));
+            write.append("            { \"name\": \"测试2\", \"max\": 16000}," + System.getProperty("line.separator"));
+            write.append("            { \"name\": \"测试3\", \"max\": 30000}," + System.getProperty("line.separator"));
+            write.append("            { \"name\": \"测试4\", \"max\": 38000}," + System.getProperty("line.separator"));
+            write.append("            { \"name\": \"测试5\", \"max\": 52000}," + System.getProperty("line.separator"));
+            write.append("            { \"name\": \"测试6\", \"max\": 25000}" + System.getProperty("line.separator"));
+            write.append("     ]," + System.getProperty("line.separator"));
+            write.append("    \"data\": [" + System.getProperty("line.separator"));
+            write.append("        {" + System.getProperty("line.separator"));
+            write.append("                    \"name\": \"测试标题1\"," + System.getProperty("line.separator"));
+            write.append("                    \"value\": [5300, 12000, 30000, 37000, 20000, 19000]" + System.getProperty("line.separator"));
+            write.append("        }," + System.getProperty("line.separator"));
+            write.append("        {" + System.getProperty("line.separator"));
+            write.append("                    \"name\": \"测试标题2\"," + System.getProperty("line.separator"));
+            write.append("                    \"value\": [3000, 16000, 20000, 11000, 52000, 11000]" + System.getProperty("line.separator"));
+            write.append("        }," + System.getProperty("line.separator"));
+            write.append("        {" + System.getProperty("line.separator"));
+            write.append("                    \"name\": \"测试标题3\"," + System.getProperty("line.separator"));
+            write.append("                    \"value\": [3000, 15000, 17000, 21000, 32000, 15000]" + System.getProperty("line.separator"));
+            write.append("        }" + System.getProperty("line.separator"));
+            write.append("    ]" + System.getProperty("line.separator"));
             write.append("}" + System.getProperty("line.separator"));
-
             buff.write(write.toString().getBytes("UTF-8"));
             buff.flush();
             buff.close();
