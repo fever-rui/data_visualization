@@ -32,8 +32,61 @@
         <%@ include file="header.jsp" %>
     </div>
 
-    <div>
-        <%@ include file="sidebar_nav.jsp" %>
+    <div class="left-sidebar">
+
+        <!-- 菜单 -->
+        <ul class="sidebar-nav">
+            <li class="sidebar-nav-link">
+                <a href="<%=request.getContextPath()%>/home" >
+                    <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
+                </a>
+            </li>
+
+            <li class="sidebar-nav-link">
+                <a href="javascript:;" class="sidebar-nav-sub-title active">
+                    <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 图表
+                    <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                </a>
+                <ul class="sidebar-nav sidebar-nav-sub" style="display: block;">
+                    <li class="sidebar-nav-link" >
+                        <a href="chart_line" >
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 折线图
+                        </a>
+                    </li>
+
+                    <li class="sidebar-nav-link">
+                        <a href="chart_columnar " >
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 柱状图
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link" >
+                        <a href="chart_pie" class="sub-active">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 扇形图
+                        </a>
+                    </li>
+
+                    <li class="sidebar-nav-link">
+                        <a href="chart_scatterPlot">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 散点图
+                        </a>
+                    </li>
+
+                    <li class="sidebar-nav-link">
+                        <a href="chart_radar">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 雷达图
+                        </a>
+                    </li>
+
+                    <li class="sidebar-nav-link">
+                        <a href="chart_map" >
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 地图
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+
     </div>
 
 
@@ -90,17 +143,17 @@
                 </div>
             </div>
 
-            <%--<div class="widget am-cf">--%>
-                <%--<div class="widget-head am-cf">--%>
-                    <%--<div class="widget-title am-fl">嵌套环形图</div>--%>
-                    <%--<div class="widget-function am-fr">--%>
-                        <%--<a href="javascript:;"></a>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-                <%--<div class="widget-body am-fr">--%>
-                    <%--<div  id="pie2" style="width: 100%;height: 400px;"></div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
+            <div class="widget am-cf">
+                <div class="widget-head am-cf">
+                    <div class="widget-title am-fl">嵌套环形图</div>
+                    <div class="widget-function am-fr">
+                        <a href="javascript:;"></a>
+                    </div>
+                </div>
+                <div class="widget-body am-fr">
+                    <div  id="pie2" style="width: 100%;height: 400px;"></div>
+                </div>
+            </div>
 
             <div class="widget am-cf">
                 <div class="widget-head am-cf">

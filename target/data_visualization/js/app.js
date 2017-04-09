@@ -381,7 +381,7 @@ function removeFile() {
     span.remove();
 };
 
-// //回到顶部
+//回到顶部
 // var top = document.getElementById("top");
 // top.onscroll = function(){
 //     if(document.body.scrollTop>100){
