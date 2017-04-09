@@ -5,40 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dbcb0cd-4542-4773-a519-de67fac5e9eb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/pages/sidebar_nav.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/pages/sidebar_nav.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/sidebar_nav.jsp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/map/china.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/chart_columnar.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/chart_columnar.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/dataRecordController.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/dataRecordController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/fileUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/fileUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/chart_line.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/chart_line.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/chart_map.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/chart_map.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/chart_radar.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/chart_radar.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/chart_scatterPlot.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/chart_scatterPlot.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/go_top.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/go_top.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/home_page.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/home_page.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/app.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/charts/lineChart.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/lineChart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/charts/mapChart.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/mapChart.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/chart_columnar.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/chart_columnar.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/charts/radarChart.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/radarChart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/charts/scatterPlotChart.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/scatterPlotChart.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/chart_line.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/chart_line.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/chart_map.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/chart_map.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/chart_pie.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/chart_pie.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/chart_radar.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/chart_radar.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/chart_scatterPlot.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/chart_scatterPlot.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/go_top.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/go_top.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/home_page.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/home_page.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_columnar.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_columnar.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_line.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_line.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_map.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_map.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_pie.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_pie.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_radar.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_radar.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_scatterPlot.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_scatterPlot.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/go_top.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/go_top.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/home_page.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/home_page.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/js/app.js" afterPath="$PROJECT_DIR$/target/data_visualization/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/js/charts/lineChart.js" afterPath="$PROJECT_DIR$/target/data_visualization/js/charts/lineChart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/js/charts/mapChart.js" afterPath="$PROJECT_DIR$/target/data_visualization/js/charts/mapChart.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/js/charts/pieChart.js" afterPath="$PROJECT_DIR$/target/data_visualization/js/charts/pieChart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/js/charts/radarChart.js" afterPath="$PROJECT_DIR$/target/data_visualization/js/charts/radarChart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/js/charts/scatterPlotChart.js" afterPath="$PROJECT_DIR$/target/data_visualization/js/charts/scatterPlotChart.js" />
     </list>
     <ignored path="data_visualization.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,8 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/pages/test.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/fileAnalyze.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/getHost.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
@@ -128,25 +118,27 @@
         <option value="$PROJECT_DIR$/src/main/webapp/js/charts/scatterPlot_chart.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/charts/map.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/userController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/charts/scatterPlotChart.js" />
         <option value="$PROJECT_DIR$/readme.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/dataRecordController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/charts/radarChart.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/fileUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/pages/go_top.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/app.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/app.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/home_page.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/charts/lineChart.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js" />
         <option value="$PROJECT_DIR$/src/main/resources/pages/sidebar_nav.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/pages/home_page.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/pages/chart_columnar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/pages/chart_line.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/pages/chart_map.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/pages/chart_radar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/charts/radarChart.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/pages/chart_line.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/charts/lineChart.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/charts/map/china.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/pages/chart_map.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/charts/mapChart.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/dataRecordController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/fileUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/pages/chart_scatterPlot.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/charts/scatterPlotChart.js" />
       </list>
     </option>
   </component>
@@ -181,7 +173,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1370" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -330,6 +322,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="map" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -407,6 +433,66 @@
               <option name="myItemId" value="data_visualization" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -425,19 +511,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Users\fever\data_visualization\src\main\resources\pages" />
-      <recent name="E:\Users\fever\data_visualization\src\main\webapp\js" />
-      <recent name="E:\Users\fever\data_visualization\src\main\webapp\css" />
-      <recent name="E:\Users\fever\data_visualization\src\main\webapp\assets\js" />
-      <recent name="E:\Users\fever\data_visualization\src\main\webapp\WEB-INF\assets\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Users\fever\data_visualization\src\main\webapp\js\charts\map" />
       <recent name="E:\Users\fever\data_visualization\src\main\webapp\js" />
       <recent name="E:\Users\fever\data_visualization\src\main\webapp" />
       <recent name="E:\Users\fever\data_visualization\src\main\webapp\WEB-INF" />
       <recent name="E:\Users\fever\data_visualization\src\main\webapp\WEB-INF\pages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Users\fever\data_visualization\src\main\webapp\js\charts" />
       <recent name="E:\Users\fever\data_visualization\src\main\resources\pages" />
+      <recent name="E:\Users\fever\data_visualization\src\main\webapp\js" />
+      <recent name="E:\Users\fever\data_visualization\src\main\webapp\css" />
+      <recent name="E:\Users\fever\data_visualization\src\main\webapp\assets\js" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.0.27">
@@ -1100,12 +1186,12 @@
       <workItem from="1491573628088" duration="1097000" />
       <workItem from="1491628101279" duration="6961000" />
       <workItem from="1491654247285" duration="841000" />
-      <workItem from="1491724568861" duration="3320000" />
+      <workItem from="1491724568861" duration="13776000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="369000000" />
+    <option name="totallyTimeSpent" value="379456000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1117,7 +1203,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1135,7 +1221,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2206107" sideWeight="0.4816626" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21860817" sideWeight="0.4816626" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22087745" sideWeight="0.5183374" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1193,13 +1279,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="109" column="7" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1348,13 +1427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/mapChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/columnarChart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1406,40 +1478,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/indexChart.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/scatterPlotChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1399">
-          <caret line="233" column="13" selection-start-line="233" selection-start-column="13" selection-end-line="233" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/pages/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1325">
           <caret line="84" column="41" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/dataRecordController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="207" column="28" selection-start-line="207" selection-start-column="28" selection-end-line="207" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/fileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="314" column="69" selection-start-line="314" selection-start-column="69" selection-end-line="314" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/radarChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="221" column="6" selection-start-line="221" selection-start-column="6" selection-end-line="221" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1465,25 +1508,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/lineChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-680">
-          <caret line="339" column="12" selection-start-line="339" selection-start-column="12" selection-end-line="339" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="352" column="46" selection-start-line="352" selection-start-column="46" selection-end-line="352" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1512,30 +1540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_line.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="96" column="17" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_map.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_scatterPlot.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_radar.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
@@ -1544,18 +1548,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_columnar.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/radarChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="299" column="30" selection-start-line="299" selection-start-column="30" selection-end-line="299" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="150" column="34" selection-start-line="150" selection-start-column="34" selection-end-line="150" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="137" column="12" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/map/china.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-799">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/mapChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="213" column="31" selection-start-line="213" selection-start-column="31" selection-end-line="213" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_map.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="169" column="7" selection-start-line="169" selection-start-column="7" selection-end-line="169" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/fileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="297" column="51" selection-start-line="297" selection-start-column="51" selection-end-line="297" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/dataRecordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="246" column="1" selection-start-line="246" selection-start-column="1" selection-end-line="246" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_line.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/scatterPlotChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="36" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts/lineChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="462" column="29" selection-start-line="462" selection-start-column="29" selection-end-line="462" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/chart_scatterPlot.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
           <folding />
         </state>
       </provider>

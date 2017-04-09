@@ -162,6 +162,7 @@
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/amazeui.min.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/app.js" ></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/echarts.js" ></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/map/china.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/mapChart.js" ></script>
 <script>
 

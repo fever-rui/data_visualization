@@ -115,7 +115,7 @@
                     </div>
                 </form>
 
-                <form  method="post" action="/record/columnar_fileDownLoad">
+                <form  method="post" action="/record/scatter_fileDownLoad">
                     <button class="am-btn am-btn-primary   am-btn-sm" style="margin-left: 10px" type="submit" >
                         下载数据模板
                         <i class="am-icon-cloud-download"></i>
@@ -144,6 +144,18 @@
                 </div>
             </div>
 
+            <%--<div class="widget am-cf">--%>
+                <%--<div class="widget-head am-cf">--%>
+                    <%--<div class="widget-title am-fl">散点图</div>--%>
+                    <%--<div class="widget-function am-fr">--%>
+                        <%--<a href="javascript:;"></a>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+                <%--<div class="widget-body am-fr">--%>
+                    <%--<div  id="scatter2" style="width: 100%;height: 400px;"></div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+
 
         </div>
     </div>
@@ -163,10 +175,8 @@
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/amazeui.min.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/app.js" ></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/echarts.js" ></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/map/china.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/charts/scatterPlotChart.js" ></script>
-<script>
-
-</script>
 </body>
 
 </html>

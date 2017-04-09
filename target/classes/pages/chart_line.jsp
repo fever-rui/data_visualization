@@ -170,29 +170,30 @@
                 </div>
             </div>
 
-            <div class="widget am-cf">
-                <div class="widget-head am-cf">
-                    <div class="widget-title am-fl">大数据面积图</div>
-                    <div class="widget-function am-fr">
-                        <a href="javascript:;"></a>
-                    </div>
-                </div>
-                <div class="widget-body am-fr">
-                    <div  id="shuju" style="width: 100%;height: 400px;"></div>
-                </div>
-            </div>
+            <%--<div class="widget am-cf">--%>
+                <%--<div class="widget-head am-cf">--%>
+                    <%--<div class="widget-title am-fl">大数据面积图</div>--%>
+                    <%--<div class="widget-function am-fr">--%>
+                        <%--<a href="javascript:;"></a>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+                <%--<div class="widget-body am-fr">--%>
+                    <%--<div  id="shuju" style="width: 100%;height: 400px;"></div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
 
-            <div class="widget am-cf">
-                <div class="widget-head am-cf">
-                    <div class="widget-title am-fl">动态数据+时间坐标轴</div>
-                    <div class="widget-function am-fr">
-                        <a href="javascript:;"></a>
-                    </div>
-                </div>
-                <div class="widget-body am-fr">
-                    <div  id="trends" style="width: 100%;height: 400px;"></div>
-                </div>
-            </div>
+            <%--<div class="widget am-cf">--%>
+                <%--<div class="widget-head am-cf">--%>
+                    <%--<div class="widget-title am-fl">动态数据+时间坐标轴</div>--%>
+                    <%--<div class="widget-function am-fr">--%>
+                        <%--<a href="javascript:;"></a>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+                <%--<div class="widget-body am-fr">--%>
+                    <%--<div  id="trends" style="width: 100%;height: 400px;"></div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+
         </div>
     </div>
 

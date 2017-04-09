@@ -207,4 +207,41 @@ public class dataRecordController {
                 +" 进入radar_fileDownLoad函数");
         fileUtil.radarWriteToTxt(response);
     }
+
+    /**
+     * 散点图数据导入
+     * @param file
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/scatter_fileLoad", method = RequestMethod.POST, produces = "text/html;charset=UTF-8")
+    public String scatter_fileLoad(HttpServletRequest request,@RequestParam("file") MultipartFile file) {
+
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入scatter_fileLoad函数"+" 参数："+" file:"+file.getOriginalFilename());
+        if(!fileUtil.isTxt(file.getOriginalFilename())) {
+            return "false";
+        }else {
+            String result= fileUtil.Analyze(file);
+            try {
+                URLEncoder.encode(result,"UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                logger.error(e);
+            }
+            addRecord(request,file.getOriginalFilename(),"散点图",result);
+            return result;
+        }
+    }
+
+    /**
+     * 散点图数据模板
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/scatter_fileDownLoad")
+    public void scatter_fileDownLoad(HttpServletRequest request, HttpServletResponse response) {
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入scatter_fileDownLoad函数");
+        fileUtil.scatterWriteToTxt(response);
+    }
 }

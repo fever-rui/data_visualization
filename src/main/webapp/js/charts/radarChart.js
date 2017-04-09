@@ -109,6 +109,19 @@ option = {
     legend: {
         data: ['测试标题1', '测试标题2']
     },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true,
+                type: ['pie', 'funnel']
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
     radar: {
         shape: 'polygon',
         indicator: [
@@ -146,6 +159,19 @@ option = {
     tooltip: {},
     legend: {
         data: ['测试标题1', '测试标题2']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true,
+                type: ['pie', 'funnel']
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
     },
     radar: {
         shape: 'polygon',
@@ -186,6 +212,19 @@ option = {
     legend: {
         data: ['测试标题1', '测试标题2']
     },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true,
+                type: ['pie', 'funnel']
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
     radar: {
         shape: 'circle',
         indicator: [
@@ -223,6 +262,19 @@ option = {
     tooltip: {},
     legend: {
         data: ['测试标题1', '测试标题2']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true,
+                type: ['pie', 'funnel']
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
     },
     radar: {
         shape: 'circle',

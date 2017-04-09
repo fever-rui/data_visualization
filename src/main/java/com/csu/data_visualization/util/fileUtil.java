@@ -352,5 +352,46 @@ public class fileUtil {
         }
     }
 
+    /**
+     * 下载散点图demo文件
+     * @param response
+     */
+    public static void scatterWriteToTxt(HttpServletResponse response) {
+        logger.info("scatterWriteToTxt函数");
+
+        try {
+            String fileName = URLEncoder.encode("散点图demo.txt", "utf-8");
+            response.setContentType("text/plain");
+            response.addHeader("Content-Disposition",
+                    "attachment;filename="+fileName);// filename指定默认的名字
+        } catch (UnsupportedEncodingException e) {
+            logger.error(e);
+        }
+
+        BufferedOutputStream buff = null;
+        StringBuffer write = new StringBuffer();
+
+        ServletOutputStream outSTr = null;
+        try {
+            outSTr = response.getOutputStream();
+            buff = new BufferedOutputStream(outSTr);
+
+            //获取系统换行符换行
+            write.append("{" + System.getProperty("line.separator"));
+
+            buff.write(write.toString().getBytes("UTF-8"));
+            buff.flush();
+            buff.close();
+        } catch (Exception e) {
+            logger.error(e);
+        } finally {
+            try {
+                buff.close();
+                outSTr.close();
+            } catch (Exception e) {
+                logger.error(e);
+            }
+        }
+    }
 
 }
