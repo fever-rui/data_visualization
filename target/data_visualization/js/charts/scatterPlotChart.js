@@ -1,80 +1,6 @@
 /**
  * Created by fever on 2017/4/6.
  */
-//表单提交
-$('#fileSubmit').click(function () {
-    if($("#doc-form-file").val() == "") {
-        $('#alertSelectFile').modal();
-    }else {
-        var form = new FormData(document.getElementById("fileForm"));
-        $.ajax({
-            url:"/record/scatter_fileLoad",
-            type:"post",
-            data:form,
-            processData:false,
-            contentType:false,
-            success:function(data){
-                if(data==='false') {
-                    $('#typeFalse-model').modal();
-                }else {
-                    removeFile();
-                    $('#success-model').modal();
-                    modifyChart(data);
-                }
-            },
-            error:function(){
-                $('#failure-model').modal();
-            }
-        });
-    }
-
-});
-
-//动态修改
-function modifyChart(chartData) {
-
-    var jsonData = JSON.parse(chartData);
-    var len = jsonData.data.length;
-
-    var namesx = [];
-    var namesy = [];//类别数组（实际用来盛放X轴坐标值）
-    var names = [];     //存放数据系列名称
-
-    namesx=jsonData.xAxis[0].name;
-    namesy=jsonData.yAxis[0].name;
-
-    {
-        var Item = function () {
-            return {
-                name: '',
-                type: 'scatter',
-                data: []
-            }
-        };
-
-        var mySeries = [];
-
-        for (var i = 0; i < len; i++) {
-            names.push(jsonData.data[i].name);    //挨个取出类别并填入
-            var it = new Item();
-            it.name = jsonData.data[i].name;
-            it.smooth = jsonData.data[i].smooth;
-            it.data = jsonData.data[i].value
-            mySeries.push(it);
-        }
-        option1.title.text=jsonData.title;
-        option1.series = mySeries;
-
-        option1.legend.data = names;
-        option1.xAxis.data = namesx;
-        option1.yAxis.data = namesy;
-
-
-        myChart.setOption(option1,true);
-    }
-}
-
-
 var scatter1 = echarts.init(document.getElementById("scatter1"));
 
 var dataAll = [
@@ -231,5 +157,127 @@ option1 = {
 };
 
 scatter1.setOption(option1,true);
+
+//表单提交
+$('#fileSubmit').click(function () {
+    if($("#doc-form-file").val() == "") {
+        $('#alertSelectFile').modal();
+    }else {
+        var form = new FormData(document.getElementById("fileForm"));
+        $.ajax({
+            url:"/record/scatter_fileLoad",
+            type:"post",
+            data:form,
+            processData:false,
+            contentType:false,
+            success:function(data){
+                if(data==='false') {
+                    $('#typeFalse-model').modal();
+                }else {
+                    removeFile();
+                    $('#success-model').modal();
+                    modifyChart(data);
+                }
+            },
+            error:function(){
+                $('#failure-model').modal();
+            }
+        });
+    }
+
+});
+
+//动态修改
+function modifyChart(chartData) {
+
+    var jsonData = JSON.parse(chartData);
+    var len = jsonData.data[0].name.length;
+    var namesx = '';
+    var namesy = '';//类别数组（实际用来盛放X轴坐标值）
+    var names = [];     //存放数据系列名称
+    namesx=jsonData.xAxis[0].name;
+    namesy=jsonData.yAxis[0].name;
+
+    {
+        //修改visualmap
+        var itemVisual = function () {
+            return {
+                left: 'right',
+                top: '10%',
+                min: 0,
+                max: 20,
+                dimension: 0,
+                itemWidth: 30,
+                itemHeight: 120,
+                calculable: true,
+                precision: 0.1,
+                text: ['x轴'],
+                textGap: 20,
+                textStyle: {
+                    color: '#fff'
+                },
+                inRange: {
+                    symbolSize: [10, 20]
+                },
+                outOfRange: {
+                    symbolSize: [10, 20],
+                    color: ['rgba(255,255,255,.2)']
+                },
+                controller: {
+                    inRange: {
+                        color: ['#c23531']
+                    },
+                    outOfRange: {
+                        color: ['#444']
+                    }
+                },
+            }
+        };
+        var myVisual = [];
+
+
+        for(var i=0;i<jsonData.visualMap.length;i++){
+            var it = new itemVisual();
+            it.min=jsonData.visualMap[i].min;
+            it.max=jsonData.visualMap[i].max;
+            it.text=jsonData.visualMap[i].text;
+            it.dimension=jsonData.visualMap[i].dimension;
+            it.inRange.symbolSize=jsonData.visualMap[i].inRange.symbolSize;
+            it.outOfRange.symbolSize=jsonData.visualMap[i].outOfRange.symbolSize;
+            myVisual.push(it);
+        }
+
+        //修改series
+        var Item = function () {
+            return {
+                name: '',
+                type: 'scatter',
+                data: []
+            }
+        };
+
+        var mySeries = [];
+
+        for (var i = 0; i < len; i++) {
+            names.push(jsonData.data[0].name[i]);    //挨个取出类别并填入
+            var it = new Item();
+            it.name = jsonData.data[0].name[i];
+            it.data=jsonData.dataAll[i];
+            mySeries.push(it);
+        }
+        option1.title.text=jsonData.title;
+        option1.series = mySeries;
+        option1.legend.data = names;
+        option1.xAxis[0].name = namesx;
+        option1.yAxis[0].name = namesy;
+        option1.visualMap=myVisual;
+
+
+        scatter1.setOption(option1,true);
+    }
+}
+
+
+
 
 

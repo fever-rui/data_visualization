@@ -1,6 +1,7 @@
 /**
  * Created by fever on 2017/3/31.
  */
+
 function showInfo(obj) {
     var idCount=obj.id.substring(4);
     var upId="up"+idCount;
@@ -20,3 +21,5 @@ function hiddenInfo(obj) {
     downElement.style.display="block";
     trElement.style.display="none";
 }
+
+

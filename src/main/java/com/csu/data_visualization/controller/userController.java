@@ -74,6 +74,19 @@ public class userController {
         return model;
     }
 
+
+    /**
+     * 跳转说明界面
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/description", method = RequestMethod.GET)
+    public ModelAndView toescription(ModelAndView model,HttpServletRequest request) {
+        logger.info("ip:"+ hostUtil.getRemoteHost(request) +" todDescription函数,转入注册界面 ");
+        model.setViewName("description");
+        return model;
+    }
+
     /**
      * 跳转至主页
      * @param model

@@ -44,6 +44,12 @@
                 </a>
             </li>
 
+            <%--<li class="sidebar-nav-link">--%>
+                <%--<a href="<%=request.getContextPath()%>/description"  >--%>
+                    <%--<i class="am-icon-book sidebar-nav-link-logo"></i> 说明文档--%>
+                <%--</a>--%>
+            <%--</li>--%>
+
             <li class="sidebar-nav-link">
                 <a href="javascript:;" class="sidebar-nav-sub-title">
                     <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 图表
@@ -254,12 +260,10 @@
                 dataType : "json",
                 success : function (data){
                     console.log("test")
-//                    var jsonData=JSON.parse(data);
                     var list=data.recordList;
                     modifyTable(list);
                 },
                 error : function(){
-//                    $.AMUI.progress.done();
                     console.log("error");
                 },
             });

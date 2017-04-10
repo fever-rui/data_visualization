@@ -227,6 +227,19 @@ option1 = {
             return params.name + ' : ' + params.value[2];
         }
     },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true,
+                type: ['pie', 'funnel']
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
     legend: {
         orient: 'vertical',
         y: 'bottom',

@@ -169,7 +169,7 @@
 
             <div class="widget am-cf">
                 <div class="widget-head am-cf">
-                    <div class="widget-title am-fl">南丁格尔玫瑰图</div>
+                    <div class="widget-title am-fl">南丁格尔玫瑰图（半径）</div>
                     <div class="widget-function am-fr">
                         <a href="javascript:;"></a>
                     </div>
@@ -178,6 +178,19 @@
                     <div  id="pie4" style="width: 100%;height: 400px;"></div>
                 </div>
             </div>
+
+            <div class="widget am-cf">
+                <div class="widget-head am-cf">
+                    <div class="widget-title am-fl">南丁格尔玫瑰图（面积）</div>
+                    <div class="widget-function am-fr">
+                        <a href="javascript:;"></a>
+                    </div>
+                </div>
+                <div class="widget-body am-fr">
+                    <div  id="pie5" style="width: 100%;height: 400px;"></div>
+                </div>
+            </div>
+
         </div>
     </div>
 

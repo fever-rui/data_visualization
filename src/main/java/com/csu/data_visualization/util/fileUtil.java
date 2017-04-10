@@ -376,8 +376,44 @@ public class fileUtil {
             outSTr = response.getOutputStream();
             buff = new BufferedOutputStream(outSTr);
 
-            //获取系统换行符换行
             write.append("{" + System.getProperty("line.separator"));
+            write.append("    \"title\": \"test\"," + System.getProperty("line.separator"));
+            write.append("    \"xAxis\": [{" + System.getProperty("line.separator"));
+            write.append("\t\"name\": [\"测试x1\"]" + System.getProperty("line.separator"));
+            write.append("    }]," + System.getProperty("line.separator"));
+            write.append("    \"yAxis\": [{" + System.getProperty("line.separator"));
+            write.append("\t\"name\": [\"测试y1\"]" + System.getProperty("line.separator"));
+            write.append("    }]," + System.getProperty("line.separator"));
+            write.append("    \"dataAll\":[" + System.getProperty("line.separator"));
+            write.append("        [" + System.getProperty("line.separator"));
+            write.append("            [10.0, 8.04]," + System.getProperty("line.separator"));
+            write.append("            [8.0, 6.95]," + System.getProperty("line.separator"));
+            write.append("            [13.0, 7.58]," + System.getProperty("line.separator"));
+            write.append("            [9.0, 8.81]," + System.getProperty("line.separator"));
+            write.append("            [11.0, 8.33]," + System.getProperty("line.separator"));
+            write.append("            [14.0, 9.96]" + System.getProperty("line.separator"));
+            write.append("        ]" + System.getProperty("line.separator"));
+            write.append("    ]," + System.getProperty("line.separator"));
+            write.append("    \"visualMap\": [" + System.getProperty("line.separator"));
+            write.append("            {" + System.getProperty("line.separator"));
+            write.append("                \"min\": 0," + System.getProperty("line.separator"));
+            write.append("                \"max\": 30," + System.getProperty("line.separator"));
+            write.append("                \"text\": [\"x11\"]," + System.getProperty("line.separator"));
+            write.append("                \"dimension\":0," + System.getProperty("line.separator"));
+            write.append("                \"inRange\": {" + System.getProperty("line.separator"));
+            write.append("                    \"symbolSize\": [10, 50]" + System.getProperty("line.separator"));
+            write.append("                }," + System.getProperty("line.separator"));
+            write.append("                \"outOfRange\": {" + System.getProperty("line.separator"));
+            write.append("                    \"symbolSize\": [10, 20]" + System.getProperty("line.separator"));
+            write.append("                }" + System.getProperty("line.separator"));
+            write.append("            }" + System.getProperty("line.separator"));
+            write.append("    ]," + System.getProperty("line.separator"));
+            write.append("    \"data\": [" + System.getProperty("line.separator"));
+            write.append("        {" + System.getProperty("line.separator"));
+            write.append("            \"name\": [\"测试1\"]" + System.getProperty("line.separator"));
+            write.append("        }" + System.getProperty("line.separator"));
+            write.append("    ]" + System.getProperty("line.separator"));
+            write.append("}" + System.getProperty("line.separator"));
 
             buff.write(write.toString().getBytes("UTF-8"));
             buff.flush();
