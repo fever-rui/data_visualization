@@ -5,29 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dbcb0cd-4542-4773-a519-de67fac5e9eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/pages/description.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/controller/dataRecordController.class" afterPath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/controller/dataRecordController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/controller/userController.class" afterPath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/controller/userController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/util/fileUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/csu/data_visualization/util/fileUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/controller/dataRecordController.class" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/controller/dataRecordController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/controller/userController.class" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/controller/userController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/util/fileUtil.class" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/com/csu/data_visualization/util/fileUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/userController.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/userController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/fileUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/fileUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/chart_pie.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pages/home_page.jsp" afterPath="$PROJECT_DIR$/src/main/resources/pages/home_page.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/charts/mapChart.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/mapChart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/pieChart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/charts/scatterPlotChart.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts/scatterPlotChart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/home_page.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/home_page.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/chart_pie.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/chart_pie.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/home_page.jsp" afterPath="$PROJECT_DIR$/target/classes/pages/home_page.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_pie.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/chart_pie.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/home_page.jsp" afterPath="$PROJECT_DIR$/target/data_visualization/WEB-INF/classes/pages/home_page.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/js/charts/pieChart.js" afterPath="$PROJECT_DIR$/target/data_visualization/js/charts/pieChart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/js/charts/scatterPlotChart.js" afterPath="$PROJECT_DIR$/target/data_visualization/js/charts/scatterPlotChart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/data_visualization/js/home_page.js" afterPath="$PROJECT_DIR$/target/data_visualization/js/home_page.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/MainController.java" afterPath="" />
     </list>
     <ignored path="data_visualization.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,18 +38,7 @@
     <favorites_list name="data_visualization" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="home_page.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/pages/home_page.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -410,36 +377,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data_visualization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data_visualization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data_visualization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1195,12 +1132,12 @@
       <workItem from="1491628101279" duration="6961000" />
       <workItem from="1491654247285" duration="841000" />
       <workItem from="1491724568861" duration="13859000" />
-      <workItem from="1491805909058" duration="11305000" />
+      <workItem from="1491805909058" duration="11637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="390844000" />
+    <option name="totallyTimeSpent" value="391176000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1213,7 +1150,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1230,7 +1167,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21860817" sideWeight="0.4816626" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21860817" sideWeight="0.4816626" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22087745" sideWeight="0.5183374" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1309,13 +1246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csu/data_visualization/test/mainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csu/data_visualization/util/hostUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1362,13 +1292,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1647,6 +1570,22 @@
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csu/data_visualization/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csu/data_visualization/test/mainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
