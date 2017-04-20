@@ -12,7 +12,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>扇形图</title>
+    <title>说明文档</title>
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
@@ -41,6 +41,7 @@
                     <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
                 </a>
             </li>
+
 
             <li class="sidebar-nav-link">
                 <a href="<%=request.getContextPath()%>/description" class="active" >

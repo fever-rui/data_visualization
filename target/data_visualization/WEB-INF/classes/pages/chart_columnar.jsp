@@ -43,6 +43,12 @@
             </li>
 
             <li class="sidebar-nav-link">
+                <a href="<%=request.getContextPath()%>/description"  >
+                    <i class="am-icon-book sidebar-nav-link-logo"></i> 说明文档
+                </a>
+            </li>
+
+            <li class="sidebar-nav-link">
                 <a href="javascript:;" class="sidebar-nav-sub-title active">
                     <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 图表
                     <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
@@ -168,17 +174,17 @@
                 </div>
             </div>
 
-            <div class="widget am-cf">
-                <div class="widget-head am-cf">
-                    <div class="widget-title am-fl">折柱混合图</div>
-                    <div class="widget-function am-fr">
-                        <a href="javascript:;"></a>
-                    </div>
-                </div>
-                <div class="widget-body am-fr">
-                    <div  id="columnar4" style="width: 100%;height: 400px;"></div>
-                </div>
-            </div>
+            <%--<div class="widget am-cf">--%>
+                <%--<div class="widget-head am-cf">--%>
+                    <%--<div class="widget-title am-fl">折柱混合图</div>--%>
+                    <%--<div class="widget-function am-fr">--%>
+                        <%--<a href="javascript:;"></a>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+                <%--<div class="widget-body am-fr">--%>
+                    <%--<div  id="columnar4" style="width: 100%;height: 400px;"></div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
         </div>
     </div>
 

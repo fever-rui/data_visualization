@@ -47,6 +47,12 @@
                 </li>
 
                 <li class="sidebar-nav-link">
+                    <a href="<%=request.getContextPath()%>/description"  >
+                        <i class="am-icon-book sidebar-nav-link-logo"></i> 说明文档
+                    </a>
+                </li>
+
+                <li class="sidebar-nav-link">
                     <a href="javascript:;" class="sidebar-nav-sub-title active">
                         <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 图表
                         <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
