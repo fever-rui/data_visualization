@@ -422,4 +422,46 @@ public class fileUtil {
         }
     }
 
+    /**
+     * 下载地图demo文件
+     * @param response
+     */
+    public static void mapWriteToTxt(HttpServletResponse response) {
+        logger.info("mapWriteToTxt函数");
+
+        try {
+            String fileName = URLEncoder.encode("地图demo.txt", "utf-8");
+            response.setContentType("text/plain");
+            response.addHeader("Content-Disposition",
+                    "attachment;filename="+fileName);// filename指定默认的名字
+        } catch (UnsupportedEncodingException e) {
+            logger.error(e);
+        }
+
+        BufferedOutputStream buff = null;
+        StringBuffer write = new StringBuffer();
+
+        ServletOutputStream outSTr = null;
+        try {
+            outSTr = response.getOutputStream();
+            buff = new BufferedOutputStream(outSTr);
+
+            write.append("{" + System.getProperty("line.separator"));
+            write.append("}" + System.getProperty("line.separator"));
+
+            buff.write(write.toString().getBytes("UTF-8"));
+            buff.flush();
+            buff.close();
+        } catch (Exception e) {
+            logger.error(e);
+        } finally {
+            try {
+                buff.close();
+                outSTr.close();
+            } catch (Exception e) {
+                logger.error(e);
+            }
+        }
+    }
+
 }

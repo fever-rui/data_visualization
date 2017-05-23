@@ -121,7 +121,7 @@
                     </div>
                 </form>
 
-                <form  method="post" action="/record/columnar_fileDownLoad">
+                <form  method="post" action="/record/map_fileDownLoad">
                     <button class="am-btn am-btn-primary   am-btn-sm" style="margin-left: 10px" type="submit" >
                         下载数据模板
                         <i class="am-icon-cloud-download"></i>

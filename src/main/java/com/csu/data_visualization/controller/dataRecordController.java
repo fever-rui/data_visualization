@@ -244,4 +244,42 @@ public class dataRecordController {
                 +" 进入scatter_fileDownLoad函数");
         fileUtil.scatterWriteToTxt(response);
     }
+
+
+    /**
+     * 地图数据导入
+     * @param file
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/map_fileLoad", method = RequestMethod.POST, produces = "text/html;charset=UTF-8")
+    public String map_fileLoad(HttpServletRequest request,@RequestParam("file") MultipartFile file) {
+
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入map_fileLoad函数"+" 参数："+" file:"+file.getOriginalFilename());
+        if(!fileUtil.isTxt(file.getOriginalFilename())) {
+            return "false";
+        }else {
+            String result= fileUtil.Analyze(file);
+            try {
+                URLEncoder.encode(result,"UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                logger.error(e);
+            }
+            addRecord(request,file.getOriginalFilename(),"地图",result);
+            return result;
+        }
+    }
+
+    /**
+     * 地图数据模板
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/map_fileDownLoad")
+    public void map_fileDownLoad(HttpServletRequest request, HttpServletResponse response) {
+        logger.info("ip:"+ hostUtil.getRemoteHost(request)+" 用户:"+request.getSession().getAttribute("userAccount")
+                +" 进入map_fileDownLoad函数");
+        fileUtil.mapWriteToTxt(response);
+    }
 }

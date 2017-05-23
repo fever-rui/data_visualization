@@ -1,6 +1,65 @@
 /**
  * Created by fever on 2017/4/6.
  */
+
+//表单提交
+$('#fileSubmit').click(function () {
+    if($("#doc-form-file").val() == "") {
+        $('#alertSelectFile').modal();
+    }else {
+        var form = new FormData(document.getElementById("fileForm"));
+        $.ajax({
+            url:"/record/map_fileLoad",
+            type:"post",
+            data:form,
+            processData:false,
+            contentType:false,
+            success:function(data){
+                if(data==='false') {
+                    $('#typeFalse-model').modal();
+                }else {
+                    removeFile();
+                    $('#success-model').modal();
+                    modifyChart(data);
+                }
+            },
+            error:function(){
+                $('#failure-model').modal();
+            }
+        });
+    }
+
+});
+
+function modifyChart(chartData) {
+
+    var jsonData = JSON.parse(chartData);
+    var len = jsonData.data.length;
+    // var indicator_len=jsonData.data.length;
+    //
+    // var namesIndicator = [];    //类别数组（实际用来存放类型）
+    var names = [];     //存放数据系列名称
+    for (var i = 0; i < len; i++) {
+        names.push(jsonData.data[i].name);    //挨个取出类别并填入
+    }
+
+    {
+        var Item = function () {
+            return {
+                type: 'radar',
+                data: []
+            }
+        };
+
+        //设置新的series
+
+
+        //赋值给option
+
+    }
+
+}
+
 var geoCoordMap = {
     "海门":[121.15,31.89],
     "鄂尔多斯":[109.781327,39.608266],
@@ -214,8 +273,6 @@ option1 = {
     backgroundColor: '#404a59',
     title: {
         text: '全国主要城市空气质量',
-        subtext: 'data from PM25.in',
-        sublink: 'http://www.pm25.in',
         x:'center',
         textStyle: {
             color: '#fff'
