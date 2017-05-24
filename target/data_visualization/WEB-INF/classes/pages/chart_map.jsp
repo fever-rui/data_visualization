@@ -42,11 +42,6 @@
                 </a>
             </li>
 
-            <li class="sidebar-nav-link">
-                <a href="<%=request.getContextPath()%>/description"  >
-                    <i class="am-icon-book sidebar-nav-link-logo"></i> 说明文档
-                </a>
-            </li>
 
             <li class="sidebar-nav-link">
                 <a href="javascript:;" class="sidebar-nav-sub-title active">
@@ -146,7 +141,7 @@
                     </div>
                 </div>
                 <div class="widget-body am-fr">
-                    <div  id="map1" style="width: 100%;height: 400px;"></div>
+                    <div  id="map1" style="width: 100%;height: 600px;"></div>
                 </div>
             </div>
 
