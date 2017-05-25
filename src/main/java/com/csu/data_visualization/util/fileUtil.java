@@ -447,6 +447,32 @@ public class fileUtil {
             buff = new BufferedOutputStream(outSTr);
 
             write.append("{" + System.getProperty("line.separator"));
+            write.append("    \"title\": \"test\"," + System.getProperty("line.separator"));
+            write.append("    \"geoCoordMap\":" + System.getProperty("line.separator"));
+            write.append("    {" + System.getProperty("line.separator"));
+            write.append("            \"测试1\":[111.19,34.76]," + System.getProperty("line.separator"));
+            write.append("            \"测试2\":[100.19,40.76]," + System.getProperty("line.separator"));
+            write.append("            \"测试3\":[80.19,50.76]" + System.getProperty("line.separator"));
+            write.append("    }," + System.getProperty("line.separator"));
+            write.append("    \"visualMap\": [" + System.getProperty("line.separator"));
+            write.append("        {" + System.getProperty("line.separator"));
+            write.append("            \"min\": 0," + System.getProperty("line.separator"));
+            write.append("            \"max\": 100," + System.getProperty("line.separator"));
+            write.append("            \"text\": [\"test\"]" + System.getProperty("line.separator"));
+            write.append("        }" + System.getProperty("line.separator"));
+            write.append("    ]," + System.getProperty("line.separator"));
+            write.append("    \"value\":[" + System.getProperty("line.separator"));
+            write.append("        {" + System.getProperty("line.separator"));
+            write.append("            \"name\": \"测试1\"," + System.getProperty("line.separator"));
+            write.append("            \"value\": 10" + System.getProperty("line.separator"));
+            write.append("        },{" + System.getProperty("line.separator"));
+            write.append("            \"name\": \"测试2\"," + System.getProperty("line.separator"));
+            write.append("            \"value\": 15" + System.getProperty("line.separator"));
+            write.append("        },{" + System.getProperty("line.separator"));
+            write.append("            \"name\": \"测试3\"," + System.getProperty("line.separator"));
+            write.append("            \"value\": 20" + System.getProperty("line.separator"));
+            write.append("        }" + System.getProperty("line.separator"));
+            write.append("    ]" + System.getProperty("line.separator"));
             write.append("}" + System.getProperty("line.separator"));
 
             buff.write(write.toString().getBytes("UTF-8"));

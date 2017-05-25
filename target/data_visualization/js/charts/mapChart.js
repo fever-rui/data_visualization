@@ -34,28 +34,77 @@ $('#fileSubmit').click(function () {
 function modifyChart(chartData) {
 
     var jsonData = JSON.parse(chartData);
-    var len = jsonData.data.length;
-    // var indicator_len=jsonData.data.length;
-    //
-    // var namesIndicator = [];    //类别数组（实际用来存放类型）
-    var names = [];     //存放数据系列名称
-    for (var i = 0; i < len; i++) {
-        names.push(jsonData.data[i].name);    //挨个取出类别并填入
-    }
+    // var len = jsonData.geoCoordMap.length;
+
+    geoCoordMap=jsonData.geoCoordMap;
 
     {
+        //修改visualmap
+        var itemVisual = function () {
+            return {
+                min: 0,
+                max: 200,
+                calculable: true,
+                text: [''],
+                inRange: {
+                    color: ['#50a3ba', '#eac736', '#d94e5d']
+                },
+                textStyle: {
+                    color: '#fff'
+                }
+            }
+        };
+        var myVisual = [];
+
+        for(var i=0;i<jsonData.visualMap.length;i++){
+            var it = new itemVisual();
+            it.min=jsonData.visualMap[i].min;
+            it.max=jsonData.visualMap[i].max;
+            it.text=jsonData.visualMap[i].text;
+            myVisual.push(it);
+        }
+
+        //修改series
         var Item = function () {
             return {
-                type: 'radar',
-                data: []
+                name: '',
+                type: 'scatter',
+                coordinateSystem: 'geo',
+                data: [],
+                symbolSize: 12,
+                label: {
+                    normal: {
+                        show: false
+                    },
+                    emphasis: {
+                        show: false
+                    }
+                },
+                itemStyle: {
+                    emphasis: {
+                        borderColor: '#fff',
+                            borderWidth: 1
+                    }
+                }
             }
         };
 
         //设置新的series
-
+        var mySeries = [];
+        var it = new Item();
+        it.name = jsonData.title;
+        it.data=convertData(jsonData.value);
+        mySeries.push(it);
 
         //赋值给option
+        option1.title.text=jsonData.title;
+        option1.series = mySeries;
+        option1.visualMap=myVisual;
+        var names=[];
+        names.push(jsonData.title);
+        option1.legend.data=names;
 
+        map1.setOption(option1,true);
     }
 
 }
@@ -299,8 +348,8 @@ option1 = {
     },
     legend: {
         orient: 'vertical',
-        y: 'bottom',
-        x:'right',
+        y:'top',
+        x:'left',
         data:['pm2.5'],
         textStyle: {
             color: '#fff'
