@@ -217,7 +217,7 @@ function modifyChart(chartData) {
                     color: '#fff'
                 },
                 inRange: {
-                    symbolSize: [10, 20]
+                    symbolSize: [10, 50]
                 },
                 outOfRange: {
                     symbolSize: [10, 20],

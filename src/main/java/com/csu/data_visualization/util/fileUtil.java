@@ -452,7 +452,7 @@ public class fileUtil {
             write.append("    {" + System.getProperty("line.separator"));
             write.append("            \"测试1\":[111.19,34.76]," + System.getProperty("line.separator"));
             write.append("            \"测试2\":[100.19,40.76]," + System.getProperty("line.separator"));
-            write.append("            \"测试3\":[80.19,50.76]" + System.getProperty("line.separator"));
+            write.append("            \"测试3\":[121.48,31.22]" + System.getProperty("line.separator"));
             write.append("    }," + System.getProperty("line.separator"));
             write.append("    \"visualMap\": [" + System.getProperty("line.separator"));
             write.append("        {" + System.getProperty("line.separator"));
