@@ -20,7 +20,10 @@ pipeline {
             bat 'This will run only if successful'
         }
         failure {
-            bat 'This will run only if failed'
+            mail to: 'rui9508@163.com',
+             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+             body: "Something is wrong with ${env.BUILD_URL}"
+    
         }
         unstable {
             bat 'This will run only if the run was marked as unstable'
