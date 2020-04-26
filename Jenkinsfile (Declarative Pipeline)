@@ -10,6 +10,7 @@ pipeline {
             steps {
                 bat 'set'
             }
+       }
     }
     post {
         always {
