@@ -6,8 +6,9 @@ pipeline {
                 bat 'test hello'
             }
         }
-       steps('build') {
-                bat 'build hello'
+       stage('build') {
+            steps {
+                bat 'set'
             }
     }
     post {
